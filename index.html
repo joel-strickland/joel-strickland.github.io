@@ -37,27 +37,52 @@
         .hero {
             background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
             color: white;
-            padding: 80px 0;
-            margin-bottom: 50px;
+            padding: 40px 0;
+            margin-bottom: 30px;
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .hero .credentials {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-bottom: 15px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-bottom: 8px;
         }
         .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .hero .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .hero-text {
+            text-align: left;
+        }
+        .hero-photo {
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
         }
         .btn-custom {
             background-color: white;
             color: #1a365d;
-            padding: 12px 30px;
+            padding: 10px 24px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
@@ -137,21 +162,26 @@
 <body>
     <!-- Hero Section -->
     <div class="hero">
-        <div class="container text-center">
-            <img src="headshot.jpeg" alt="Joel Strickland" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid white; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <h1>Joel Strickland, PhD, CEng</h1>
-            <p class="credentials" style="font-size: 1rem; opacity: 0.9; margin-bottom: 5px;">Visiting Expert, University of Leicester</p>
-            <p>Head of Agentic AI @ Intellegens | AI/ML Consultant & Technical Advisor</p>
-            <p style="font-size: 1.1rem;">Building autonomous AI systems that deliver real-world impact</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/joel-strickland" target="_blank">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank">Google Scholar</a>
-                <a href="https://www.researchgate.net/profile/Joel-Strickland" target="_blank">ResearchGate</a>
-                <a href="mailto:joelstrickland.ai@gmail.com">Email</a>
-            </div>
-            <div style="margin-top: 30px;">
-                <a href="cv.html" class="btn-custom">View CV</a>
-                <a href="#about" class="btn-custom">About Me</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-photo">
+                    <img src="headshot.jpeg" alt="Joel Strickland" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                </div>
+                <div class="hero-text">
+                    <h1>Joel Strickland, PhD, CEng</h1>
+                    <p style="margin-bottom: 8px; font-size: 1.1rem;">Head of Agentic AI @ Intellegens | Visiting Expert, University of Leicester</p>
+                    <p class="tagline">Building autonomous AI systems that deliver real-world impact</p>
+                    <div class="social-links" style="margin-bottom: 12px;">
+                        <a href="https://www.linkedin.com/in/joel-strickland" target="_blank">LinkedIn</a>
+                        <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank">Scholar</a>
+                        <a href="https://www.researchgate.net/profile/Joel-Strickland" target="_blank">ResearchGate</a>
+                        <a href="mailto:joelstrickland.ai@gmail.com">Email</a>
+                    </div>
+                    <div>
+                        <a href="cv.html" class="btn-custom">View CV</a>
+                        <a href="#about" class="btn-custom">About Me</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
