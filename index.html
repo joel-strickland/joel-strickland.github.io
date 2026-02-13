@@ -224,23 +224,23 @@
     </div>
 
     <!-- Track Record Section -->
-    <div class="container section">
+    <div class="container section" id="stats-section">
         <h2>Track Record</h2>
         <div class="row">
             <div class="col-md-3 text-center mb-4">
-                <div class="stats-number">100+</div>
+                <div class="stats-number" data-target="100" data-suffix="+">0</div>
                 <p>Companies Demonstrated To</p>
             </div>
             <div class="col-md-3 text-center mb-4">
-                <div class="stats-number">50+</div>
+                <div class="stats-number" data-target="50" data-suffix="+">0</div>
                 <p>Enterprise Projects Delivered</p>
             </div>
             <div class="col-md-3 text-center mb-4">
-                <div class="stats-number">290+</div>
+                <div class="stats-number" data-target="290" data-suffix="+">0</div>
                 <p>Citations</p>
             </div>
             <div class="col-md-3 text-center mb-4">
-                <div class="stats-number">10+</div>
+                <div class="stats-number" id="years-counter" data-suffix="+">0</div>
                 <p>Years in AI/ML</p>
             </div>
         </div>
@@ -433,5 +433,70 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Calculate years since PhD started (September 2016)
+        function calculateYears() {
+            const phdStart = new Date(2016, 8, 1); // September 2016
+            const now = new Date();
+            const years = (now - phdStart) / (1000 * 60 * 60 * 24 * 365.25);
+            return Math.floor(years * 10) / 10; // One decimal place
+        }
+
+        // Animate counter
+        function animateCounter(element, target, duration = 2000) {
+            const suffix = element.dataset.suffix || '';
+            const isDecimal = target % 1 !== 0;
+            let start = 0;
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smooth deceleration
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = start + (target - start) * easeOut;
+                
+                if (isDecimal) {
+                    element.textContent = current.toFixed(1) + suffix;
+                } else {
+                    element.textContent = Math.floor(current) + suffix;
+                }
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        // Intersection Observer for scroll trigger
+        let hasAnimated = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    
+                    // Animate regular counters
+                    document.querySelectorAll('.stats-number[data-target]').forEach(stat => {
+                        const target = parseInt(stat.dataset.target);
+                        animateCounter(stat, target);
+                    });
+                    
+                    // Animate years counter with calculated value
+                    const yearsCounter = document.getElementById('years-counter');
+                    if (yearsCounter) {
+                        animateCounter(yearsCounter, calculateYears());
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observe the stats section
+        const statsSection = document.getElementById('stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
 </body>
 </html>
