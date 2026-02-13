@@ -381,6 +381,7 @@
 
     <!-- Expertise Section -->
     <div class="container section">
+        <div class="section-label">What I Do</div>
         <h2>Areas of Expertise</h2>
         <div class="row">
             <div class="col-md-4">
@@ -438,6 +439,7 @@
 
     <!-- Featured Publications Section -->
     <div class="container section">
+        <div class="section-label">Research</div>
         <h2>Featured Publications</h2>
         <p class="text-muted mb-4">290+ citations | 20+ peer-reviewed papers | h-index: 9</p>
         <div class="row">
@@ -495,6 +497,7 @@
 
     <!-- Featured Talks Section -->
     <div class="container section">
+        <div class="section-label">Thought Leadership</div>
         <h2>Featured Talks & Writing</h2>
         <div class="row" id="talks-grid">
             <!-- Row 1 -->
@@ -607,15 +610,16 @@
                 </a>
             </div>
         </div>
-        <div class="text-center mt-3">
+        <div class="text-center mt-3 toggle-divider">
             <button class="btn btn-outline-primary" id="toggle-talks" onclick="toggleTalks()" aria-expanded="false" aria-controls="talks-grid">
-                Show More <span id="toggle-icon">+</span>
+                Show 5 More <span id="toggle-icon">+</span>
             </button>
         </div>
     </div>
 
     <!-- Current Role Section -->
     <div class="container section">
+        <div class="section-label">Now</div>
         <h2>Current Role</h2>
         <div class="highlight">
             <h4>Head of Agentic AI @ Intellegens</h4>
@@ -631,10 +635,11 @@
 
     <!-- CTA Section -->
     <div class="container section text-center">
+        <div class="section-label">Connect</div>
         <h2>Interested in Collaborating?</h2>
-        <p class="lead">Always interested in connecting with people working on agentic AI, automation, and applied ML.</p>
-        <a href="mailto:joelstrickland.ai@gmail.com" class="btn-custom">Get in Touch</a>
-        <a href="cv.html" class="btn-custom">Download CV</a>
+        <p class="lead" style="margin: 0 auto 24px;">Always interested in connecting with people working on agentic AI, automation, and applied ML.</p>
+        <a href="mailto:joelstrickland.ai@gmail.com" class="btn btn-primary btn-lg" style="border-radius: 10px; padding: 12px 32px; font-weight: 600;">Get in Touch</a>
+        <a href="cv.html" class="btn btn-outline-secondary btn-lg" style="border-radius: 10px; padding: 12px 32px; margin-left: 10px;">Download CV</a>
     </div>
 
     <!-- Footer -->
@@ -743,7 +748,7 @@
                 }
             });
             
-            button.innerHTML = talksExpanded ? 'Show Less <span id="toggle-icon">-</span>' : 'Show More <span id="toggle-icon">+</span>';
+            button.innerHTML = talksExpanded ? 'Show Fewer <span id=\"toggle-icon\">−</span>' : 'Show 5 More <span id=\"toggle-icon\">+</span>';
         }
     </script>
 </body>
