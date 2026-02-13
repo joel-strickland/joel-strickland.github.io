@@ -6,9 +6,9 @@ Personal website and CV for Joel Strickland, PhD, CEng.
 
 ## About
 
-Head of Agentic AI at Intellegens | Visiting Professor at University of Leicester | AI/ML Consultant
+Head of Agentic AI at Intellegens | Visiting Expert at University of Leicester | AI/ML Consultant
 
-- 8+ years delivering ML solutions to Fortune 500 companies
+- 10+ years delivering ML solutions to Fortune 500 companies
 - 290+ citations, 20+ peer-reviewed publications
 - Expertise: Agentic AI, LLMs, Adaptive Experimental Design, Enterprise ML
 
