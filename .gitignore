@@ -23,4 +23,8 @@ Thumbs.db
 
 /*
 !.gitignore
-!site/
+!index.html
+!cv.html
+!README.md
+!LICENSE
+!me.jpeg
