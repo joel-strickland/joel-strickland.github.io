@@ -25,6 +25,7 @@ Thumbs.db
 !.gitignore
 !index.html
 !cv.html
+!nav.js
 !styles.css
 !README.md
 !LICENSE
