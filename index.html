@@ -836,13 +836,47 @@
         </div>
     </div>
 
-    <!-- Featured Talks Section -->
+    <!-- Portfolio Section -->
     <div class="container section" id="talks">
         <div class="section-label">Thought Leadership</div>
-        <h2>Featured Talks & Writing</h2>
-        <div class="row" id="talks-grid">
-            <!-- Row 1 -->
-            <div class="col-md-6 mb-3 talk-card">
+        <h2>Portfolio</h2>
+        <p class="text-muted mb-4">Talks, webinars, articles, and case studies I've authored or presented.</p>
+        
+        <!-- Filter buttons -->
+        <div class="portfolio-filters mb-4">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="writing">Writing</button>
+            <button class="filter-btn" data-filter="casestudy">Case Studies</button>
+            <button class="filter-btn" data-filter="webinar">Webinars</button>
+            <button class="filter-btn" data-filter="talk">Talks</button>
+        </div>
+        
+        <style>
+            .portfolio-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+            .filter-btn {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                color: var(--text-2);
+                padding: 8px 16px;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+            .filter-btn:hover { background: var(--surface-2); color: var(--text); }
+            .filter-btn.active {
+                background: linear-gradient(135deg, var(--accent), var(--accent-2));
+                color: #0B0B0B;
+                border-color: transparent;
+            }
+            .portfolio-item { transition: opacity 0.3s ease, transform 0.3s ease; }
+            .portfolio-item.hidden { display: none !important; }
+        </style>
+        
+        <div class="row" id="portfolio-grid">
+            <!-- 2025 -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
                 <a href="https://intellegens.com/watch-recording-can-agentic-ai-transform-chemicals-and-materials-rd/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -853,20 +887,40 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
+                <a href="https://intellegens.com/wp-content/uploads/2025/06/Agentic-AI-in-R-and-D-Jun-2025.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Report, 2025</h6>
+                            <h5 class="card-title">Agentic AI in R&D: Seminar Report</h5>
+                            <p class="card-text small">Invitation-only industry seminar</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
                 <a href="https://intellegens.com/conversational-ai-for-science-finding-a-route-through-the-jungle/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Article, 2025</h6>
                             <h5 class="card-title">Conversational AI for Science: Finding a Route Through the Jungle</h5>
-                            <p class="card-text small">NOA Agentic AI Blog Series (Part 1)</p>
+                            <p class="card-text small">NOA Agentic AI Blog Series</p>
                         </div>
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
+                <a href="https://intellegens.com/agents-of-change/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Article, 2025</h6>
+                            <h5 class="card-title">Agents of Change</h5>
+                            <p class="card-text small">Intellegens Blog</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Conference, 2025</h6>
@@ -875,7 +929,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Conference, 2025</h6>
@@ -884,9 +938,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-3 talk-card">
+            
+            <!-- 2024 -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
                 <a href="https://intellegens.com/tracking-the-potential-for-large-language-models-in-materials-science/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -897,19 +951,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 talk-card">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Conference, 2024</h6>
-                        <h5 class="card-title">AIChE Spring Meeting 2024</h5>
-                        <p class="card-text small">ML for Chemicals & Materials R&D</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hidden rows -->
-        <div class="row talk-hidden" style="display: none;">
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
                 <a href="https://intellegens.com/webinar-12-nov-empowering-advanced-material-and-process-development-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -920,7 +962,51 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Conference, 2024</h6>
+                        <h5 class="card-title">AIChE Spring Meeting 2024</h5>
+                        <p class="card-text small">ML for Chemicals & Materials R&D</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2023 -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
+                <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Case Study, 2023</h6>
+                            <h5 class="card-title">ML for Food Formulation at Yili</h5>
+                            <p class="card-text small">Food & beverage optimization</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
+                <a href="https://intercalationstation.substack.com/p/revolutionising-energy-storage-the" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Article, 2023</h6>
+                            <h5 class="card-title">Revolutionising Energy Storage with Machine Learning</h5>
+                            <p class="card-text small">Intercalation Station (Substack)</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
+                <a href="https://intellegens.com/three-ways-ai-can-switch-on-battery-research/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Article, 2023</h6>
+                            <h5 class="card-title">Three Ways AI Can Switch on Battery Research</h5>
+                            <p class="card-text small">Intellegens Blog</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
                 <a href="https://intellegens.com/webinar-design-of-experiments-made-easy-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -931,33 +1017,18 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="row talk-hidden" style="display: none;">
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
                 <a href="https://intellegens.com/webinar-machine-learning-for-formulation-development-a-food-industry-case-study/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Webinar, 2023</h6>
-                            <h5 class="card-title">ML for Formulation Development: Food Industry Case Study</h5>
+                            <h5 class="card-title">ML for Formulation Development: Food Industry</h5>
                             <p class="card-text small">Intellegens Webinar Recording</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 talk-card">
-                <a href="https://intellegens.com/revolutionising-energy-storage-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2023</h6>
-                            <h5 class="card-title">Revolutionising Energy Storage with Machine Learning</h5>
-                            <p class="card-text small">Batteries & Energy Materials</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row talk-hidden" style="display: none;">
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
                 <a href="https://intellegens.com/webinar-15-mar-optimising-additive-manufacturing-processes-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -968,7 +1039,62 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 talk-card">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://www.uk-cpi.com/cpi-batteries-webinar" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2023</h6>
+                            <h5 class="card-title">ML for Battery Development</h5>
+                            <p class="card-text small">CPI Batteries Webinar</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Conference, 2023</h6>
+                        <h5 class="card-title">Metallurgical Optimisation with Machine Learning</h5>
+                        <p class="card-text small">3rd Int'l Forum on Intelligent Metallurgy, Beijing</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2022 -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
+                <a href="https://intellegens.com/wp-content/uploads/2022/02/AMRC-composite-drilling-case-study.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">White Paper, 2022</h6>
+                            <h5 class="card-title">AMRC Composite Drilling Optimization</h5>
+                            <p class="card-text small">Aerospace manufacturing with AMRC</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
+                <a href="https://intellegens.com/understanding-and-improving-steel-performance-with-ocas/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Case Study, 2022</h6>
+                            <h5 class="card-title">Understanding Steel Performance with OCAS</h5>
+                            <p class="card-text small">ArcelorMittal research partnership</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-how-fuchs-apply-machine-learning-to-lubricant-formulation-development/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2022</h6>
+                            <h5 class="card-title">FUCHS: ML for Lubricant Formulation</h5>
+                            <p class="card-text small">Intellegens Webinar Recording</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
                 <a href="https://intellegens.com/webinar-transforming-materials-and-process-development-through-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -979,37 +1105,44 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="row talk-hidden" style="display: none;">
-            <div class="col-md-6 mb-3 talk-card">
-                <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Case Study, 2023</h6>
-                            <h5 class="card-title">ML for Food Formulation at Yili</h5>
-                            <p class="card-text small">Published case study</p>
-                        </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Conference, 2022</h6>
+                        <h5 class="card-title">Information Alchemy: Extracting Value from R&D Data</h5>
+                        <p class="card-text small">Advanced Materials Show</p>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col-md-6 mb-3 talk-card">
-                <a href="https://intellegens.com/wp-content/uploads/2022/02/AMRC-composite-drilling-case-study.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">White Paper, 2022</h6>
-                            <h5 class="card-title">AMRC Composite Drilling Optimization</h5>
-                            <p class="card-text small">ML for aerospace manufacturing</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="text-center mt-3 toggle-divider">
-            <button class="btn btn-outline-primary" id="toggle-talks" onclick="toggleTalks()" aria-expanded="false" aria-controls="talks-grid">
-                Show More <span id="toggle-icon">+</span>
-            </button>
         </div>
     </div>
+    
+    <script>
+    // Portfolio filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.portfolio-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter items
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.type === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    });
+    </script>
 
     <!-- CTA Section -->
     <div class="container section text-center">
@@ -1104,37 +1237,6 @@
         const statsSection = document.getElementById('stats-section');
         if (statsSection) {
             observer.observe(statsSection);
-        }
-
-        // Toggle talks visibility
-        let talksExpanded = false;
-        function toggleTalks() {
-            const hiddenRows = document.querySelectorAll('.talk-hidden');
-            const button = document.getElementById('toggle-talks');
-            
-            talksExpanded = !talksExpanded;
-            button.setAttribute('aria-expanded', talksExpanded);
-            
-            hiddenRows.forEach((row, index) => {
-                if (talksExpanded) {
-                    row.style.display = 'flex';
-                    row.style.opacity = '0';
-                    row.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        row.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                        row.style.opacity = '1';
-                        row.style.transform = 'translateY(0)';
-                    }, index * 100);
-                } else {
-                    row.style.opacity = '0';
-                    row.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        row.style.display = 'none';
-                    }, 300);
-                }
-            });
-            
-            button.innerHTML = talksExpanded ? 'Show Fewer <span id=\"toggle-icon\">−</span>' : 'Show More <span id=\"toggle-icon\">+</span>';
         }
 
         // Update dynamic years in About section on page load
