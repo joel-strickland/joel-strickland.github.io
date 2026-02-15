@@ -50,21 +50,37 @@
     // ============================================
     // WORKING TOGETHER SECTION
     // ============================================
+    // Content defined once, templates adapt to page context
+    const workingTogetherContent = {
+        consulting: {
+            title: 'Independent Consulting',
+            text: 'I consult through <strong>Promethean Technologies Ltd</strong>. I operate as a trusted advisor, not a vendor, and am deeply invested in your success. I provide strategic guidance, technical expertise, and hands-on support to help you achieve your goals.'
+        },
+        delivery: {
+            title: 'Delivery Model',
+            text: 'Project-based with agreed milestones and deadlines. Typical response time: &lt;24 hours. Async-first with scheduled syncs as needed. Fully remote.'
+        },
+        firstCall: {
+            title: 'First Call',
+            text: "We'll align on scope, deliverables, timeline, and acceptance criteria."
+        }
+    };
+    
     const workingTogetherHTML = isCV ? `
     <div id="working-together" style="margin: 40px 0;">
         <h2>Working Together</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
             <div style="flex: 1; min-width: 200px;">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">Independent Consulting</h5>
-                <p class="small" style="color: var(--text-3);">I consult through <strong>Promethean Technologies Ltd</strong>, fully separate from my employer. No IP conflicts, no use of employer resources. Happy to sign your confidentiality/IP terms.</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.consulting.title}</h5>
+                <p class="small" style="color: var(--text-3);">${workingTogetherContent.consulting.text}</p>
             </div>
             <div style="flex: 1; min-width: 200px;">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">Delivery Model</h5>
-                <p class="small" style="color: var(--text-3);">Project-based with agreed milestones and deadlines. Typical response time: &lt;24 hours. Async-first with scheduled syncs as needed. Fully remote.</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.delivery.title}</h5>
+                <p class="small" style="color: var(--text-3);">${workingTogetherContent.delivery.text}</p>
             </div>
             <div style="flex: 1; min-width: 200px;">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">First Call</h5>
-                <p class="small" style="color: var(--text-3);">We'll align on scope, deliverables, timeline, and acceptance criteria.</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.firstCall.title}</h5>
+                <p class="small" style="color: var(--text-3);">${workingTogetherContent.firstCall.text}</p>
             </div>
         </div>
     </div>
@@ -74,16 +90,16 @@
         <h2>Working Together</h2>
         <div class="row">
             <div class="col-md-4 mb-3">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">Independent Consulting</h5>
-                <p class="small text-muted mb-0">I consult through <strong>Promethean Technologies Ltd</strong>, fully separate from my employer. No IP conflicts, no use of employer resources. Happy to sign your confidentiality/IP terms.</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.consulting.title}</h5>
+                <p class="small text-muted mb-0">${workingTogetherContent.consulting.text}</p>
             </div>
             <div class="col-md-4 mb-3">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">Delivery Model</h5>
-                <p class="small text-muted mb-0">Project-based with agreed milestones and deadlines. Typical response time: &lt;24 hours. Async-first with scheduled syncs as needed. Fully remote.</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.delivery.title}</h5>
+                <p class="small text-muted mb-0">${workingTogetherContent.delivery.text}</p>
             </div>
             <div class="col-md-4 mb-3">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">First Call</h5>
-                <p class="small text-muted mb-0">We'll align on scope, deliverables, timeline, and acceptance criteria.</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.firstCall.title}</h5>
+                <p class="small text-muted mb-0">${workingTogetherContent.firstCall.text}</p>
             </div>
         </div>
     </div>
