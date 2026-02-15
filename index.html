@@ -571,9 +571,9 @@
                 </a>
             </div>
             <div class="col-md-3 text-center mb-4">
-                <div class="stats-number" id="years-counter" data-target="9" data-suffix="+">9+</div>
+                <div class="stats-number" id="years-counter" data-target="9.4">9.4</div>
                 <p>Years in AI/ML</p>
-                <p class="small text-muted" style="font-size: 0.75rem;">Since PhD (2016)</p>
+                <p class="small text-muted" style="font-size: 0.75rem;">Since Sept 2016</p>
             </div>
         </div>
         <p class="text-center text-muted">Paid delivery clients include BP, GSK, AstraZeneca, PPG, Clorox, and Syngenta</p>
@@ -584,7 +584,7 @@
         <div class="section-label">Background</div>
         <h2>About Me</h2>
         <div class="highlight">
-            <p class="lead" style="margin-bottom: 20px;">Independent AI/ML consultant with <span id="about-years">9+</span> years delivering transformative machine learning solutions to Fortune 500 companies across pharma, chemicals, materials, manufacturing, and consumer goods.</p>
+            <p class="lead" style="margin-bottom: 20px;">Independent AI/ML consultant with <span id="about-years">9.4</span> years delivering transformative machine learning solutions to Fortune 500 companies across pharma, chemicals, materials, manufacturing, and consumer goods.</p>
             <ul style="list-style: none; padding-left: 0;">
                 <li style="margin-bottom: 12px;"><strong>Specialisms:</strong> Algorithm development, agentic AI systems, adaptive experimental design, enterprise AI adoption</li>
                 <li style="margin-bottom: 12px;"><strong>Background:</strong> Materials science, machine learning, R&D, quantitative modelling</li>
@@ -1284,8 +1284,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             const aboutYears = document.getElementById('about-years');
             if (aboutYears) {
-                const years = Math.floor(calculateYears());
-                aboutYears.textContent = years + '+';
+                const years = calculateYears();
+                aboutYears.textContent = years.toFixed(1);
             }
         });
     </script>
