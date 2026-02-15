@@ -92,6 +92,8 @@
     /* Additional custom styles */
     html {
       scroll-behavior: smooth;
+      background: #0B0B0B;
+      background: var(--bg);
     }
     body {
       max-width: 900px;
@@ -100,13 +102,16 @@
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
       font-size: 17px;
       line-height: 1.65;
+      color: #f0f0f0;
       color: var(--text);
+      background: #0B0B0B;
       background-color: var(--bg);
       background-image: 
         radial-gradient(ellipse at 20% 0%, rgba(255,122,26,.03) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 100%, rgba(47,164,255,.03) 0%, transparent 50%);
       background-attachment: fixed;
       position: relative;
+      min-height: 100vh;
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -120,10 +125,21 @@
       border-radius: 10px;
     }
     
-    p, li { max-width: var(--max-width-text); color: var(--text-2); }
-    strong { color: var(--text); }
-    a { color: var(--accent-2); }
-    a:hover { color: var(--accent); }
+    p, li { 
+      max-width: var(--max-width-text); 
+      color: #b8b8b8;
+      color: var(--text-2); 
+    }
+    strong { 
+      color: #f0f0f0;
+      color: var(--text); 
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #f0f0f0;
+      color: var(--text);
+    }
+    a { color: #2FA4FF; color: var(--accent-2); }
+    a:hover { color: #FF7A1A; color: var(--accent); }
     
     .nav-bar {
       background: rgba(11, 11, 11, 0.85);
