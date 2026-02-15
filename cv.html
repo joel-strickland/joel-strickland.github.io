@@ -61,22 +61,28 @@
     .cv-content {
       max-width: 900px;
       margin: 0 auto;
-      padding: 24px 20px 40px;
+      padding: 70px 20px 40px;
     }
     
     /* Quick nav styling */
     .quick-nav {
       background: rgba(11, 11, 11, 0.95);
-      padding: 12px 16px;
-      margin-bottom: 24px;
-      border-radius: var(--radius);
+      padding: 12px 24px;
+      border-radius: 0;
       font-size: 0.9rem;
-      border: 1px solid var(--border);
-      position: sticky;
-      top: 58px;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      position: fixed;
+      top: 53px;
+      left: 0;
+      right: 0;
       z-index: 999;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
     }
     .quick-nav strong {
       color: var(--text-3);
@@ -91,9 +97,9 @@
       color: var(--accent);
     }
     
-    /* Override scroll offset to account for both sticky navs */
+    /* Override scroll offset to account for both fixed navs */
     .cv-content [id] {
-      scroll-margin-top: 120px;
+      scroll-margin-top: 110px;
     }
     
     h1, h2, h3 { letter-spacing: -0.03em; }
@@ -247,10 +253,10 @@
 <!-- Quick Navigation -->
 <nav class="quick-nav">
   <strong>Jump to:</strong>
-  <a href="#professional-experience">Experience</a>
   <a href="#core-expertise">Skills</a>
-  <a href="#education-certifications">Education</a>
+  <a href="#professional-experience">Experience</a>
   <a href="#publications-thought-leadership">Publications</a>
+  <a href="#education-certifications">Education</a>
 </nav>
 
 <h1 id="joel-strickland-phd-ceng">Joel Strickland, PhD, CEng</h1>
