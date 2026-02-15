@@ -124,7 +124,7 @@ a:hover {
 
 /* Scroll offset for sticky nav */
 [id] {
-    scroll-margin-top: 56px;
+    scroll-margin-top: -30px;
 }
 
 /* ============================================

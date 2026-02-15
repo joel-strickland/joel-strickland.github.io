@@ -91,6 +91,11 @@
       color: var(--accent);
     }
     
+    /* Override scroll offset to account for both sticky navs */
+    .cv-content [id] {
+      scroll-margin-top: 110px;
+    }
+    
     h1, h2, h3 { letter-spacing: -0.03em; }
     h1 {
       color: var(--text);
