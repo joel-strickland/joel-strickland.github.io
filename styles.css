@@ -165,7 +165,7 @@ a:hover {
     display: flex;
     gap: 6px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .main-nav .nav-links a {
@@ -201,6 +201,20 @@ a:hover {
     box-shadow: 0 6px 20px var(--glow-orange), 0 0 30px var(--glow-blue);
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     color: #0B0B0B;
+}
+
+/* Tighter nav on medium screens */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .main-nav .nav-links {
+        gap: 2px;
+    }
+    .main-nav .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    .main-nav .nav-links .btn-contact {
+        padding: 8px 14px;
+    }
 }
 
 /* ============================================
