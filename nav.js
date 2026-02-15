@@ -33,6 +33,7 @@
                         <a href="${prefix}#expertise">Expertise</a>
                         <a href="${prefix}#publications">Research</a>
                         <a href="${prefix}#talks">Talks</a>
+                        <a href="${prefix}#evidence">Evidence</a>
                         <a href="${prefix}#working-together">Working Together</a>
                     </div>
                 </div>
