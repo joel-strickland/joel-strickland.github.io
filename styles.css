@@ -42,7 +42,7 @@ html {
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
     background: var(--bg);
-    scroll-padding-top: 70px;
+    scroll-padding-top: 60px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -125,7 +125,7 @@ a:hover {
 
 /* Scroll offset for sticky nav */
 [id] {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 60px;
 }
 
 /* ============================================
