@@ -168,64 +168,6 @@
       box-shadow: 0 8px 30px var(--glow-orange), 0 0 60px var(--glow-blue);
     }
     
-    /* Main navigation - matches index.html */
-    .main-nav {
-      background: rgba(11, 11, 11, 0.85);
-      padding: 14px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .main-nav .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .main-nav .brand {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-    }
-    .main-nav .nav-links {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-    }
-    .main-nav .nav-links a {
-      color: var(--text-2);
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 10px;
-      transition: all 0.2s ease;
-      font-weight: 500;
-    }
-    .main-nav .nav-links a:hover {
-      background: rgba(255,255,255,.08);
-      color: var(--text);
-    }
-    .main-nav .nav-links a.active {
-      color: var(--text);
-      background: rgba(255,255,255,.05);
-    }
-    .main-nav .nav-links a.btn-contact {
-      color: #0B0B0B;
-      padding: 10px 20px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      font-weight: 700;
-      box-shadow: 0 4px 15px var(--glow-orange);
-    }
-    .main-nav .nav-links a.btn-contact:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px var(--glow-orange), 0 0 30px var(--glow-blue);
-    }
-    
     /* Print styles - Dark text on white for printing */
     @media print {
       .nav-bar, nav, .cta-footer { display: none !important; }
