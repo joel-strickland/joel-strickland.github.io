@@ -42,6 +42,7 @@ html {
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
     background: var(--bg);
+    scroll-padding-top: 100px;
 }
 
 @media (prefers-reduced-motion: reduce) {
