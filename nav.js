@@ -19,7 +19,7 @@
             <div class="nav-links">
                 <a href="${prefix}#about">About</a>
                 <a href="${prefix}#services">Services</a>
-                <a href="${prefix}#case-studies">Case Studies</a>
+                <a href="${prefix}#talks">Portfolio</a>
                 <div class="nav-dropdown">
                     <button class="nav-dropdown-toggle">
                         More
@@ -32,8 +32,6 @@
                         <a href="${prefix}#tech-stack">Tech Stack</a>
                         <a href="${prefix}#expertise">Expertise</a>
                         <a href="${prefix}#publications">Research</a>
-                        <a href="${prefix}#talks">Talks</a>
-                        <a href="${prefix}#evidence">Evidence</a>
                         <a href="${prefix}#working-together">Working Together</a>
                     </div>
                 </div>

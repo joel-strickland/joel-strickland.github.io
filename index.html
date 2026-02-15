@@ -980,42 +980,34 @@
                 </a>
             </div>
         </div>
-        <div class="text-center mt-3 toggle-divider">
-            <button class="btn btn-outline-primary" id="toggle-talks" onclick="toggleTalks()" aria-expanded="false" aria-controls="talks-grid">
-                Show More <span id="toggle-icon">+</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Published Case Studies Section -->
-    <div class="container section" id="case-studies">
-        <div class="section-label">Evidence</div>
-        <h2>Published Case Studies</h2>
-        <p class="text-muted mb-4">Published work I contributed to at Intellegens.</p>
-        
-        <div class="row">
-            <div class="col-md-6 mb-3">
+        <div class="row talk-hidden" style="display: none;">
+            <div class="col-md-6 mb-3 talk-card">
                 <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study, 2023</h6>
-                            <h5 class="card-title">ML for Food Formulation Development at Yili</h5>
-                            <p class="card-text small">Machine learning to optimize multi-ingredient formulations against sensory targets, reducing experimental iterations.</p>
+                            <h5 class="card-title">ML for Food Formulation at Yili</h5>
+                            <p class="card-text small">Published case study</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 mb-3 talk-card">
                 <a href="https://intellegens.com/wp-content/uploads/2022/02/AMRC-composite-drilling-case-study.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">White Paper, 2022</h6>
                             <h5 class="card-title">AMRC Composite Drilling Optimization</h5>
-                            <p class="card-text small">ML-driven process optimization for aerospace composite manufacturing with the Advanced Manufacturing Research Centre.</p>
+                            <p class="card-text small">ML for aerospace manufacturing</p>
                         </div>
                     </div>
                 </a>
             </div>
+        </div>
+        <div class="text-center mt-3 toggle-divider">
+            <button class="btn btn-outline-primary" id="toggle-talks" onclick="toggleTalks()" aria-expanded="false" aria-controls="talks-grid">
+                Show More <span id="toggle-icon">+</span>
+            </button>
         </div>
     </div>
 
