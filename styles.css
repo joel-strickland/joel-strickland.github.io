@@ -434,12 +434,13 @@ a:hover {
         background: var(--surface);
         flex-direction: column;
         align-items: stretch;
-        padding: 80px 24px 32px;
+        padding: 80px 16px 32px;
         gap: 4px;
         transition: right 0.3s ease;
         border-left: 1px solid var(--border);
         box-shadow: -10px 0 40px rgba(0,0,0,.5);
         overflow-y: auto;
+        overflow-x: hidden;
     }
     
     .main-nav .nav-links.active {
@@ -447,9 +448,11 @@ a:hover {
     }
     
     .main-nav .nav-links a {
-        padding: 14px 16px;
-        font-size: 1rem;
+        padding: 14px 12px;
+        font-size: 0.95rem;
         border-radius: var(--radius-sm);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .main-nav .nav-links .btn-contact {
@@ -491,7 +494,7 @@ a:hover {
         font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        padding: 8px 16px;
+        padding: 8px 12px;
         pointer-events: none;
     }
     
@@ -512,9 +515,11 @@ a:hover {
     }
     
     .nav-dropdown-menu a {
-        padding: 14px 16px;
-        font-size: 1rem;
+        padding: 14px 12px;
+        font-size: 0.95rem;
         border-radius: var(--radius-sm);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
