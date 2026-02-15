@@ -475,6 +475,33 @@ a:hover {
         opacity: 1;
         visibility: visible;
     }
+    
+    /* Dropdown on mobile - show inline */
+    .nav-dropdown {
+        display: contents;
+    }
+    
+    .nav-dropdown-toggle {
+        display: none;
+    }
+    
+    .nav-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        min-width: auto;
+    }
+    
+    .nav-dropdown-menu a {
+        padding: 14px 16px;
+        font-size: 1rem;
+        border-radius: var(--radius-sm);
+    }
 }
 
 /* ============================================
