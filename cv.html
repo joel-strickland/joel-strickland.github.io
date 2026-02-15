@@ -232,39 +232,7 @@
   </style>
 </head>
 <body>
-<!-- Navigation Bar - matches index.html -->
-<nav class="main-nav">
-    <div class="container">
-        <a href="index.html" class="brand">Joel Strickland</a>
-        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-        </button>
-        <div class="nav-links">
-            <a href="index.html#about">About</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#case-studies">Case Studies</a>
-            <div class="nav-dropdown">
-                <button class="nav-dropdown-toggle">
-                    More
-                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M2 4l4 4 4-4"/>
-                    </svg>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <a href="index.html#stats-section">Track Record</a>
-                    <a href="index.html#tech-stack">Tech Stack</a>
-                    <a href="index.html#expertise">Expertise</a>
-                    <a href="index.html#publications">Research</a>
-                    <a href="index.html#talks">Talks</a>
-                    <a href="index.html#working-together">Working Together</a>
-                </div>
-            </div>
-            <a href="cv.html" class="active">CV</a>
-            <a href="mailto:joelstrickland.ai@gmail.com?subject=Consulting%20Inquiry" class="btn-contact">Book a Call</a>
-        </div>
-    </div>
-</nav>
-<div class="nav-overlay"></div>
+<!-- Navigation injected by nav.js -->
 
 <div class="cv-content">
 <!-- Quick Navigation -->
@@ -518,44 +486,32 @@ Materialia, Scientific Reports, Materials Characterization</li>
 </ul>
 
 <hr style="margin-top: 50px;">
+
+<!-- Working Together Section -->
+<div id="working-together" style="margin: 40px 0;">
+  <h2>Working Together</h2>
+  <div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+    <div style="flex: 1; min-width: 200px;">
+      <h5 style="font-size: 1rem; margin-bottom: 8px;">Independent Consulting</h5>
+      <p class="small" style="color: var(--text-3);">I consult through <strong>Promethean Technologies Ltd</strong>, fully separate from my employer. No IP conflicts, no use of employer resources. Happy to sign your confidentiality/IP terms.</p>
+    </div>
+    <div style="flex: 1; min-width: 200px;">
+      <h5 style="font-size: 1rem; margin-bottom: 8px;">Delivery Model</h5>
+      <p class="small" style="color: var(--text-3);">Project-based with agreed milestones and deadlines. Typical response time: &lt;24 hours. Async-first with scheduled syncs as needed. Fully remote.</p>
+    </div>
+    <div style="flex: 1; min-width: 200px;">
+      <h5 style="font-size: 1rem; margin-bottom: 8px;">First Call</h5>
+      <p class="small" style="color: var(--text-3);">We'll align on scope, deliverables, timeline, and acceptance criteria.</p>
+    </div>
+  </div>
+</div>
+
 <div class="cta-footer">
   <p style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Interested in working together?</strong></p>
   <p style="margin-bottom: 16px;"><a href="mailto:joelstrickland.ai@gmail.com?subject=Consulting%20Inquiry" class="btn-primary-cv">Book a Call</a></p>
 </div>
 </div><!-- /.cv-content -->
 
-<script>
-    // Mobile navigation toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        const navOverlay = document.querySelector('.nav-overlay');
-        
-        function toggleNav() {
-            navToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-            navToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
-        }
-        
-        if (navToggle) {
-            navToggle.addEventListener('click', toggleNav);
-        }
-        
-        if (navOverlay) {
-            navOverlay.addEventListener('click', toggleNav);
-        }
-        
-        // Close mobile nav when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (navLinks.classList.contains('active')) {
-                    toggleNav();
-                }
-            });
-        });
-    });
-</script>
+<script src="nav.js"></script>
 </body>
 </html>
