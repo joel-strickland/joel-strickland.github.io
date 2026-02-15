@@ -476,12 +476,26 @@ a:hover {
         visibility: visible;
     }
     
-    /* Dropdown on mobile - show inline */
+    /* Dropdown on mobile - grouped section */
     .nav-dropdown {
-        display: contents;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
     }
     
     .nav-dropdown-toggle {
+        display: flex;
+        color: var(--text-3);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 8px 16px;
+        pointer-events: none;
+    }
+    
+    .nav-dropdown-toggle svg {
         display: none;
     }
     
