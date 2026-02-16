@@ -517,7 +517,7 @@
                     <h1>Joel Strickland, PhD, CEng</h1>
                     <p style="margin-bottom: 12px; font-size: 1.15rem; color: var(--text);">Uncertainty-aware machine learning • Decision intelligence • Data-to-insight systems</p>
                     <p class="tagline">I work at the intersection of data, machine learning, and decision-making under uncertainty—building the technical systems (data pipelines, models, analytics, backends/APIs) and communicating them clearly through demos, teaching, and stakeholder-facing explanations.</p>
-                    <p style="margin-bottom: 16px; font-size: 0.95rem; color: var(--text-3);">Experience in the public domain includes work with: Rolls-Royce, Voestalpine, FUCHS, BAT, YILI, OCAS, and AMRC. <a href="#portfolio" style="color: var(--accent-2);">See work →</a></p>
+                    <p style="margin-bottom: 16px; font-size: 0.95rem; color: var(--text-3);">Experience includes work with: Rolls-Royce, Voestalpine, FUCHS, NASA, BAT, YILI, OCAS, and AMRC. <a href="#portfolio" style="color: var(--accent-2);">See work →</a></p>
                     <div class="social-links" style="margin-bottom: 16px;">
                         <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg> LinkedIn</a>
                         <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M5.5 4.002h.153l1.914 1.953L8 5.986l.433-.03 1.914-1.954h.153c.058 0 .116 0 .173.004 1.666.085 2.586 1.003 2.837 1.958L11 10l-3 2-3-2-2.51-4.036c.251-.955 1.171-1.873 2.837-1.958.057-.004.115-.004.173-.004zM8 2L3.5 5.5.5 10l3 2 .5.5L8 16l4-3.5.5-.5 3-2-3-4.5L8 2z"/></svg> Scholar</a>
@@ -539,7 +539,7 @@
         <div class="section-label">What I Focus On</div>
         <h2>Core Strengths</h2>
         <div class="highlight">
-            <p class="lead" style="margin-bottom: 24px;">For R&D, industrial, and product teams working with messy data and high-stakes decisions:</p>
+            <p class="lead" style="margin-bottom: 24px;">I help teams unlock their data and make better decisions—using machine learning, uncertainty, and clear decision frameworks:</p>
             <ul style="list-style: none; padding-left: 0;">
                 <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
                     <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">→</span>
@@ -562,7 +562,7 @@
                     <strong>Communication &amp; enablement</strong> — demos, teaching, and technical storytelling
                 </li>
             </ul>
-            <p class="lead" style="margin-top: 24px;">Where it fits, I add LLM/agent interfaces so teams can query insights and trigger actions safely (tool-based agents via APIs).</p>
+            <p class="lead" style="margin-top: 24px;">Where it fits, I add LLM/agent interfaces on top so people can query insights and trigger actions safely (tool-based agents via APIs).</p>
         </div>
     </div>
 
@@ -625,11 +625,81 @@
         </div>
     </div>
 
+    <!-- How I Work Section -->
+    <div class="container section" id="process">
+        <div class="section-label">My Approach</div>
+        <h2>How I Work</h2>
+        <p class="text-muted mb-4">Whether building systems or delivering training, I follow a structured approach to ensure clarity and results.</p>
+        <style>
+            .process-steps { display: flex; flex-wrap: wrap; gap: 0; justify-content: center; }
+            .process-step { 
+                flex: 1; 
+                min-width: 200px; 
+                max-width: 280px;
+                padding: 24px 20px;
+                position: relative;
+                text-align: center;
+            }
+            .process-step::after {
+                content: '→';
+                position: absolute;
+                right: -12px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--accent);
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            .process-step:last-child::after { display: none; }
+            .process-number {
+                width: 48px;
+                height: 48px;
+                background: linear-gradient(135deg, var(--accent), var(--accent-2));
+                color: #0B0B0B;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 800;
+                font-size: 1.25rem;
+                margin: 0 auto 16px;
+            }
+            .process-step h5 { color: var(--text); margin-bottom: 8px; font-weight: 700; }
+            .process-step p { color: var(--text-2); font-size: 0.9rem; margin: 0; }
+            @media (max-width: 768px) {
+                .process-step::after { display: none; }
+                .process-step { max-width: 100%; }
+            }
+        </style>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="process-number">1</div>
+                <h5>Understand</h5>
+                <p>Clarify goals, constraints, and what data/systems exist</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">2</div>
+                <h5>Define Success</h5>
+                <p>Frame the decision or problem with clear success criteria</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">3</div>
+                <h5>Build & Validate</h5>
+                <p>Develop with real data, iterate, and document decisions</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">4</div>
+                <h5>Deliver & Enable</h5>
+                <p>Hand over with documentation and team enablement</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Portfolio Section (Moved up - proof earlier) -->
     <div class="container section" id="portfolio">
         <div class="section-label">Work & Writing</div>
         <h2>Portfolio</h2>
-        <p class="text-muted mb-4">Published case studies, articles, talks, webinars, and research.</p>
+        <p class="text-muted mb-4">In these projects I typically led: problem framing, modeling/uncertainty, and technical demos/presales—often building the algorithm + backend. Published case studies, articles, talks, and research.</p>
         
         <!-- Filter buttons -->
         <div class="portfolio-filters mb-4">
@@ -1022,6 +1092,34 @@
     });
     </script>
 
+    <!-- Platform-Agnostic Section -->
+    <div class="container section" id="vendor-neutral">
+        <div class="section-label">Approach</div>
+        <h2>Platform-Agnostic</h2>
+        <div class="highlight">
+            <p class="lead" style="margin-bottom: 20px;">I work across platforms and stacks—the goal is always to find the right approach for the problem:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Define the workflows worth automating
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Design integration into existing systems and data
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Build evaluation and validation approaches
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Enable teams through training and documentation
+                </li>
+            </ul>
+            <p style="color: var(--text-2); margin-top: 20px;">I'm comfortable working with whatever stack makes sense for the problem—cloud or on-prem, open-source or commercial.</p>
+        </div>
+    </div>
+
     <!-- About Section -->
     <div class="container section" id="about">
         <div class="section-label">Background</div>
@@ -1083,8 +1181,8 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">ML Systems &amp; Pipelines</h5>
-                        <p class="card-text">Building ML components from data to model to validation—pipelines, backends, and APIs. Deployment/ops typically with client teams.</p>
+                        <h5 class="card-title">ML Systems &amp; Backends</h5>
+                        <p class="card-text">Building ML pipelines and backend services (APIs, data flows); deployment/ops typically handled with internal teams.</p>
                     </div>
                 </div>
             </div>
@@ -1380,10 +1478,10 @@
     <div class="container section text-center" id="contact">
         <div class="section-label">Get in Touch</div>
         <h2>Speaking, Training, Collaboration</h2>
-        <p class="lead" style="margin: 0 auto 24px; max-width: 600px;">For talks, workshops, or collaboration inquiries—I'd be happy to chat.</p>
+        <p class="lead" style="margin: 0 auto 24px; max-width: 600px;">For talks, workshops, training, or collaboration inquiries—I'd be happy to chat.</p>
         <a href="mailto:joelstrickland.ai@gmail.com?subject=Speaking%20or%20Collaboration%20Inquiry" class="btn btn-primary btn-lg" style="border-radius: 10px; padding: 12px 32px; font-weight: 600;">Contact Me</a>
         <a href="cv.html" class="btn btn-outline-secondary btn-lg" style="border-radius: 10px; padding: 12px 32px; margin-left: 10px;">View Full CV</a>
-        <p class="text-muted" style="margin-top: 24px; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">joelstrickland.ai@gmail.com • <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" style="color: var(--accent-2);">LinkedIn</a></p>
+        <p class="text-muted" style="margin-top: 24px; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">Happy to discuss ML, uncertainty, decision intelligence, or speaking opportunities.</p>
     </div>
 
     <!-- Working Together Section (injected by nav.js) -->
