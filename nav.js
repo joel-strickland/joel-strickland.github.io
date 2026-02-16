@@ -32,8 +32,7 @@
                         <a href="${prefix}#tech-stack">Tech Stack</a>
                         <a href="${prefix}#expertise">Expertise</a>
                         <a href="${prefix}#faq">FAQ</a>
-                        <a href="${prefix}#publications">Research</a>
-                        <a href="${prefix}#working-together">Working Together</a>
+                        <a href="${prefix}#contact">Contact</a>
                     </div>
                 </div>
                 <a href="cv.html"${isCV ? ' class="active"' : ''}>CV</a>
@@ -68,7 +67,7 @@
     
     const workingTogetherHTML = isCV ? `
     <div id="working-together" style="margin: 40px 0;">
-        <h2>Working Together</h2>
+        <h2>Contact</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
             <div style="flex: 1; min-width: 200px;">
                 <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.consulting.title}</h5>
@@ -84,26 +83,7 @@
             </div>
         </div>
     </div>
-    ` : `
-    <div class="container section" id="working-together">
-        <div class="section-label">Contact</div>
-        <h2>Working Together</h2>
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.consulting.title}</h5>
-                <p class="small text-muted mb-0">${workingTogetherContent.consulting.text}</p>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.delivery.title}</h5>
-                <p class="small text-muted mb-0">${workingTogetherContent.delivery.text}</p>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.firstCall.title}</h5>
-                <p class="small text-muted mb-0">${workingTogetherContent.firstCall.text}</p>
-            </div>
-        </div>
-    </div>
-    `;
+    ` : ``;
     
     // Insert Working Together section if placeholder exists
     const workingTogetherPlaceholder = document.getElementById('working-together-placeholder');
