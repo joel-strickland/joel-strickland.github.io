@@ -1343,124 +1343,110 @@
         <div class="section-label">Common Questions</div>
         <h2>FAQ</h2>
         <style>
+            .faq-list {
+                max-width: 700px;
+            }
             .faq-item {
-                background: var(--surface);
-                border: 1px solid var(--border);
-                border-radius: var(--radius);
-                padding: 28px 28px 28px 56px;
-                margin-bottom: 16px;
-                position: relative;
-                transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-                overflow: hidden;
+                border-bottom: 1px solid var(--border);
             }
-            .faq-item::before {
-                content: 'Q';
-                position: absolute;
-                left: 20px;
-                top: 26px;
-                width: 24px;
-                height: 24px;
-                background: linear-gradient(135deg, var(--accent), var(--accent-2));
-                border-radius: 6px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: 800;
-                font-size: 0.75rem;
-                color: #0B0B0B;
+            .faq-item:last-child {
+                border-bottom: none;
             }
-            .faq-item::after {
-                content: '';
-                position: absolute;
-                top: 0; left: 0; right: 0;
-                height: 2px;
-                background: linear-gradient(90deg, var(--accent), var(--accent-2));
-                opacity: 0;
-                transition: opacity 0.25s ease;
-            }
-            .faq-item:hover {
-                transform: translateY(-3px);
-                background: var(--surface-2);
-                border-color: rgba(255,255,255,.1);
-                box-shadow: 0 12px 32px rgba(0,0,0,.4), 0 0 24px rgba(47,164,255,.08);
-            }
-            .faq-item:hover::after {
-                opacity: 1;
-            }
-            .faq-item h5 {
+            .faq-question {
+                width: 100%;
+                background: none;
+                border: none;
+                padding: 20px 40px 20px 0;
+                text-align: left;
+                cursor: pointer;
                 color: var(--text);
-                font-weight: 700;
-                margin-bottom: 12px;
-                font-size: 1.05rem;
+                font-weight: 600;
+                font-size: 1rem;
                 line-height: 1.4;
+                position: relative;
+                transition: color 0.2s ease;
             }
-            .faq-item p {
-                color: var(--text-2);
-                margin-bottom: 0;
-                line-height: 1.65;
+            .faq-question:hover {
+                color: var(--accent);
             }
-            .faq-item p + p {
-                margin-top: 12px;
+            .faq-question::after {
+                content: '+';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: var(--text-3);
+                transition: transform 0.2s ease, color 0.2s ease;
             }
-            .faq-item ul {
-                color: var(--text-2);
-                margin-top: 12px;
-                margin-bottom: 0;
+            .faq-item.open .faq-question::after {
+                content: '−';
+                color: var(--accent);
+            }
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+            }
+            .faq-item.open .faq-answer {
+                max-height: 500px;
+                padding-bottom: 20px;
+            }
+            .faq-answer ul {
+                margin: 0;
                 padding-left: 0;
                 list-style: none;
+                color: var(--text-2);
             }
-            .faq-item li {
-                margin-bottom: 10px;
-                padding-left: 20px;
+            .faq-answer li {
+                padding: 6px 0 6px 20px;
                 position: relative;
-                line-height: 1.55;
+                line-height: 1.5;
             }
-            .faq-item li::before {
+            .faq-answer li::before {
                 content: '→';
                 position: absolute;
                 left: 0;
                 color: var(--accent);
-                font-weight: 700;
+                font-weight: 600;
             }
-            .faq-item li:last-child {
-                margin-bottom: 0;
-            }
-            .faq-item strong {
+            .faq-answer strong {
                 color: var(--text);
             }
-            @media (max-width: 991px) {
-                .faq-item {
-                    padding: 24px 24px 24px 48px;
-                }
-                .faq-item::before {
-                    left: 16px;
-                    top: 22px;
-                }
+            .faq-answer p {
+                color: var(--text-2);
+                margin: 0 0 8px 0;
+                font-size: 0.95rem;
             }
         </style>
         
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="faq-item">
-                    <h5>Consulting availability?</h5>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">Consulting availability?</button>
+                <div class="faq-answer">
                     <ul>
                         <li>Consulting via <strong>Promethean Technologies</strong></li>
                         <li>Project-based engagements (evenings & weekends for now)</li>
                         <li>I don't take work that conflicts with my employer, Intellegens</li>
                     </ul>
                 </div>
-                
-                <div class="faq-item">
-                    <h5>How does client work relate to Intellegens?</h5>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How does client work relate to Intellegens?</button>
+                <div class="faq-answer">
                     <ul>
                         <li>All enterprise client work (Rolls-Royce, AstraZeneca, etc.) delivered through <strong>Intellegens</strong></li>
                         <li>I led technical pre-sales and agentic AI development there</li>
                         <li>References available through employer channels (enterprise NDAs apply)</li>
                     </ul>
                 </div>
-                
-                <div class="faq-item">
-                    <h5>IP and conflict policy?</h5>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">IP and conflict policy?</button>
+                <div class="faq-answer">
                     <ul>
                         <li>Client work stays with the client</li>
                         <li>No reuse of proprietary code, data, or models without agreement</li>
@@ -1469,18 +1455,20 @@
                 </div>
             </div>
             
-            <div class="col-lg-6">
-                <div class="faq-item">
-                    <h5>What agentic AI have you built?</h5>
-                    <p style="margin-bottom: 8px; font-size: 0.9rem;">Two production systems at Intellegens:</p>
+            <div class="faq-item">
+                <button class="faq-question">What agentic AI have you built?</button>
+                <div class="faq-answer">
+                    <p>Two production systems at Intellegens:</p>
                     <ul>
                         <li><strong>Alchemite Insight</strong> — AI for science agent. MCP tools + Gemini + GCP Vertex AI + Agent Dev Kit. Led algorithm & backend.</li>
                         <li><strong>NOA</strong> — Full-stack prototype (algorithm, backend, front-end). Learnings informed Insight.</li>
                     </ul>
                 </div>
-                
-                <div class="faq-item">
-                    <h5>How do you evaluate agentic systems?</h5>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How do you evaluate agentic systems?</button>
+                <div class="faq-answer">
                     <ul>
                         <li><strong>Task success</strong> — completion rate, correctness, failure analysis</li>
                         <li><strong>Guardrails</strong> — tool permissioning, action constraints</li>
@@ -1491,6 +1479,19 @@
                 </div>
             </div>
         </div>
+        
+        <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                // Open clicked if it wasn't open
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+        </script>
     </div>
 
     <!-- CTA Section -->
