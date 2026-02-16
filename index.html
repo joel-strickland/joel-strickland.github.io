@@ -708,34 +708,23 @@
 
     <!-- Portfolio Section (Moved up - proof earlier) -->
     <div class="container section" id="portfolio">
-        <div class="section-label">Proof</div>
-        <h2>Client Work & Portfolio</h2>
-        <p class="text-muted mb-4">Selected client work, publications, talks, webinars, and articles.</p>
+        <div class="section-label">Work & Writing</div>
+        <h2>Portfolio</h2>
+        <p class="text-muted mb-4">Published case studies, articles, talks, webinars, and research.</p>
         
         <!-- Filter buttons -->
         <div class="portfolio-filters mb-4">
-            <button class="filter-btn active" data-filter="clientwork">Client Work</button>
-            <button class="filter-btn" data-filter="all">All Content</button>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="casestudy">Case Studies</button>
             <button class="filter-btn" data-filter="publication">Publications</button>
             <button class="filter-btn" data-filter="writing">Writing</button>
-            <button class="filter-btn" data-filter="casestudy">Case Studies</button>
             <button class="filter-btn" data-filter="webinar">Webinars</button>
             <button class="filter-btn" data-filter="talk">Talks</button>
         </div>
         
-        <!-- Domain filters (secondary) -->
-        <div class="portfolio-filters mb-4" style="border-top: 1px solid var(--border); padding-top: 12px;">
-            <span class="small text-muted" style="margin-right: 8px; font-weight: 600;">Filter by domain:</span>
-            <button class="domain-btn active" data-domain="all">All</button>
-            <button class="domain-btn" data-domain="agentic">Agentic AI</button>
-            <button class="domain-btn" data-domain="production-ml">Production ML</button>
-            <button class="domain-btn" data-domain="optimization">R&D Optimization</button>
-            <button class="domain-btn" data-domain="manufacturing">Manufacturing</button>
-        </div>
-        
         <style>
             .portfolio-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-            .filter-btn, .domain-btn {
+            .filter-btn {
                 background: var(--surface);
                 border: 1px solid var(--border);
                 color: var(--text-2);
@@ -746,156 +735,212 @@
                 cursor: pointer;
                 transition: all 0.2s ease;
             }
-            .filter-btn:hover, .domain-btn:hover { background: var(--surface-2); color: var(--text); }
+            .filter-btn:hover { background: var(--surface-2); color: var(--text); }
             .filter-btn.active {
                 background: linear-gradient(135deg, var(--accent), var(--accent-2));
                 color: #0B0B0B;
                 border-color: transparent;
             }
-            .domain-btn { padding: 6px 12px; font-size: 0.8rem; }
-            .domain-btn.active {
-                background: var(--accent-2);
-                color: #0B0B0B;
-                border-color: transparent;
-            }
             .portfolio-item { transition: opacity 0.3s ease, transform 0.3s ease; }
             .portfolio-item.hidden { display: none !important; }
-            .client-work-badge {
-                display: inline-block;
-                background: linear-gradient(135deg, var(--accent), var(--accent-2));
-                color: #0B0B0B;
-                font-size: 0.7rem;
-                font-weight: 700;
-                padding: 3px 8px;
-                border-radius: 4px;
-                margin-left: 8px;
-                vertical-align: middle;
-            }
         </style>
         
         <div class="row" id="portfolio-grid">
-            <!-- CLIENT WORK (Featured at top) -->
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork" data-domain="agentic">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Agentic AI Platform<span class="client-work-badge">Client Work</span></h6>
-                        <h5 class="card-title">NOA — Autonomous R&D Workflows</h5>
-                        <p class="card-text small">Full-stack agentic AI platform using multi-agent architectures, LangGraph, and MCP integration for autonomous R&D workflows.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork" data-domain="agentic">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">AI Virtual Assistant<span class="client-work-badge">Client Work</span></h6>
-                        <h5 class="card-title">Alchemite Insight — Specialist Agents</h5>
-                        <p class="card-text small">AI assistant with specialized agents for quality, outlier detection, experimental design, and patent search using LangChain and Gemini.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork" data-domain="optimization">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Autonomous Optimization<span class="client-work-badge">Client Work</span></h6>
-                        <h5 class="card-title">ChemAgent — Chemical Blend Optimization</h5>
-                        <p class="card-text small">Autonomous agent for chemical blend optimization with uncertainty quantification and out-of-sample validation.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork" data-domain="production-ml">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Enterprise ML — BAT<span class="client-work-badge">Client Work</span></h6>
-                        <h5 class="card-title">Applied ML Across Imaging, Time Series & Modeling</h5>
-                        <p class="card-text small">Calcium imaging analysis, synergy modeling, embedded ML, model bias reduction, uncertainty aggregation, and pharmacokinetics modeling.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork" data-domain="manufacturing">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Materials ML — Voestalpine<span class="client-work-badge">Client Work</span></h6>
-                        <h5 class="card-title">Thin Film Deposition Modeling + Uncertainty</h5>
-                        <p class="card-text small">Predictive modeling with uncertainty quantification for thin film deposition processes.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork casestudy" data-domain="optimization">
+            <!-- CASE STUDIES -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
                 <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Food & Beverage — Yili<span class="client-work-badge">Case Study</span></h6>
-                            <h5 class="card-title">ML for Food Formulation Optimization</h5>
-                            <p class="card-text small">Published case study on formulation optimization for global food & beverage company.</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Case Study — Yili</h6>
+                            <h5 class="card-title">Developing Food Formulations at Yili</h5>
+                            <p class="card-text small">Applied ML to UHT whipping cream formulation data, imputing missing data and using hierarchical modelling to predict shelf-life behaviour and eliminate less-useful ingredients.</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork" data-domain="optimization">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Chemicals — Johnson Matthey<span class="client-work-badge">Client Work</span></h6>
-                        <h5 class="card-title">Catalyst Formulation Design Optimization</h5>
-                        <p class="card-text small">ML-driven catalyst formulation and design optimization workflows.</p>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
+                <a href="https://intellegens.com/understanding-and-improving-steel-performance-with-ocas/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Case Study — OCAS (ArcelorMittal)</h6>
+                            <h5 class="card-title">Improving Steel Performance with OCAS</h5>
+                            <p class="card-text small">Modelling steel behaviour from sparse real-world data, adding value from microstructural image data and generating insights into Processing–Structure–Property relationships.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="clientwork" data-domain="manufacturing">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Additive Manufacturing — AMRC/Boeing<span class="client-work-badge">Client Work</span></h6>
-                        <h5 class="card-title">AM Process Optimization</h5>
-                        <p class="card-text small">Machine learning for additive manufacturing process optimization.</p>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
+                <a href="https://intellegens.com/composite-manufacturing-with-the-amrc/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Case Study — The AMRC</h6>
+                            <h5 class="card-title">Composite Manufacturing with The AMRC</h5>
+                            <p class="card-text small">Composite drilling/tooling optimisation—predicting a key failure mechanism with ~80% fewer tests, understanding effects of tool geometry/material selection.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             
-            <!-- CONTENT (Webinars, Writing, Talks, Publications) -->
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar" data-domain="agentic">
-                <a href="https://intellegens.com/watch-recording-can-agentic-ai-transform-chemicals-and-materials-rd/" target="_blank" rel="noopener noreferrer" class="card-link">
+            <!-- WEBINARS -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-can-agentic-ai-transform-chemicals-and-materials-rd/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Webinar, 2025</h6>
                             <h5 class="card-title">Can Agentic AI Transform Chemicals & Materials R&D?</h5>
-                            <p class="card-text small">Intellegens Webinar Recording</p>
+                            <p class="card-text small">Agentic AI (tool-using LLM-driven systems) to coordinate/automate R&D workflows—early insights and examples for chemicals/materials R&D.</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="writing" data-domain="agentic">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-12-nov-empowering-advanced-material-and-process-development-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar — voestalpine, 2024</h6>
+                            <h5 class="card-title">Empowering Advanced Material & Process Development</h5>
+                            <p class="card-text small">ML in additive manufacturing to optimise new alloys, accelerate process-parameter development, improve process monitoring, and design better heat treatments.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-how-fuchs-apply-machine-learning-to-lubricant-formulation-development/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar — FUCHS</h6>
+                            <h5 class="card-title">How FUCHS Applies ML to Lubricant Formulation</h5>
+                            <p class="card-text small">Feature presentation from FUCHS on how ML supports experimental design and improved lubricant formulations, plus live demonstration.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-15-mar-optimising-additive-manufacturing-processes-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar — LLNL</h6>
+                            <h5 class="card-title">Lawrence Livermore National Lab Shares AM Insights</h5>
+                            <p class="card-text small">ML to improve repeatability/quality in additive manufacturing; LLNL work using ML to predict and optimise print parameters.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-transforming-materials-and-process-development-through-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar — Lucideon</h6>
+                            <h5 class="card-title">Transforming Materials & Process Development</h5>
+                            <p class="card-text small">ML applied to controlled release drug delivery, battery tech, ceramics, polymers, and complex formulations.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-machine-learning-for-formulation-development-a-food-industry-case-study/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar — Yili</h6>
+                            <h5 class="card-title">Formulation Development: A Food Industry Case Study</h5>
+                            <p class="card-text small">How formulation teams use ML to reduce experimentation, gain system insight, and find new recipes/processing paths.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://intellegens.com/webinar-design-of-experiments-made-easy-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar</h6>
+                            <h5 class="card-title">Design of Experiments Made Easy with ML</h5>
+                            <p class="card-text small">ML-led Design of Experiments positioned as reducing experiments by ~50–80% via adaptive DOE and graphical analysis tools.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
+                <a href="https://www.uk-cpi.com/cpi-batteries-webinar" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Webinar — CPI</h6>
+                            <h5 class="card-title">Digital Tech and AI for Battery Industrialisation (AMBIC)</h5>
+                            <p class="card-text small">AI, simulation, predictive modelling, adaptive DOE, and image analysis to improve battery material development and manufacturing.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- WRITING -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
                 <a href="https://intellegens.com/wp-content/uploads/2025/06/Agentic-AI-in-R-and-D-Jun-2025.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Report, 2025</h6>
-                            <h5 class="card-title">Agentic AI in R&D: Seminar Report</h5>
-                            <p class="card-text small">Invitation-only industry seminar</p>
+                            <h5 class="card-title">The Future of Agentic AI in R&D</h5>
+                            <p class="card-text small">Strategic summary from invitation-only seminar on agentic AI as workflow-orchestrating, tool-using LLM systems—opportunities and challenges.</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="writing" data-domain="agentic">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
                 <a href="https://intellegens.com/conversational-ai-for-science-finding-a-route-through-the-jungle/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Article, 2025</h6>
                             <h5 class="card-title">Conversational AI for Science: Finding a Route Through the Jungle</h5>
-                            <p class="card-text small">NOA Agentic AI Blog Series</p>
+                            <p class="card-text small">Building trustworthy conversational AI for scientific work—executing validated, reproducible workflows rather than only generating answers.</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="writing" data-domain="agentic">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
                 <a href="https://intellegens.com/agents-of-change/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Article, 2025</h6>
                             <h5 class="card-title">Agents of Change</h5>
-                            <p class="card-text small">Intellegens Blog</p>
+                            <p class="card-text small">What agentic AI means for chemicals/materials R&D—agents orchestrating tools/workflows for optimisation, experimentation, and decision-making.</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="talk" data-domain="production-ml">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
+                <a href="https://intellegens.com/tracking-the-potential-for-large-language-models-in-materials-science/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Article, 2024</h6>
+                            <h5 class="card-title">Tracking the Potential for LLMs in Materials Science</h5>
+                            <p class="card-text small">Emerging uses of LLMs in materials science—analysing structured/unstructured information and supporting discovery workflows.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
+                <a href="https://intellegens.com/three-ways-ai-can-switch-on-battery-research/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Article</h6>
+                            <h5 class="card-title">Three Ways AI Can Switch On Battery Research</h5>
+                            <p class="card-text small">ML/adaptive experimental methods to accelerate battery innovation—multi-parameter optimisation across materials, formulations, and manufacturing.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="writing">
+                <a href="https://intercalationstation.substack.com/p/revolutionising-energy-storage-the" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Substack</h6>
+                            <h5 class="card-title">Revolutionising Energy Storage: AI and Experimental Design</h5>
+                            <p class="card-text small">How AI/machine learning can supercharge battery optimisation—produced in collaboration with Intellegens for the battery industry.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- TALKS -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Conference, 2025</h6>
@@ -904,7 +949,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="talk" data-domain="production-ml">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Conference, 2025</h6>
@@ -913,7 +958,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication" data-domain="production-ml">
+            
+            <!-- PUBLICATIONS -->
+            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
                 <a href="https://www.nature.com/articles/s44172-025-00350-2" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -924,7 +971,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication" data-domain="manufacturing">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
                 <a href="https://www.sciencedirect.com/science/article/pii/S2214860424007577" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -935,7 +982,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication" data-domain="optimization">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-57808-3_3" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -946,79 +993,13 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication" data-domain="production-ml">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
                 <a href="https://biodatamining.biomedcentral.com/articles/10.1186/s13040-024-00378-w" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Journal, 2024</h6>
                             <h5 class="card-title">Nicotine Pharmacokinetic Modelling for E-Cigarettes</h5>
                             <p class="card-text small">BioData Mining</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="writing" data-domain="agentic">
-                <a href="https://intellegens.com/tracking-the-potential-for-large-language-models-in-materials-science/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Article, 2024</h6>
-                            <h5 class="card-title">Tracking the Potential for LLMs in Materials Science</h5>
-                            <p class="card-text small">Intellegens Blog</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar" data-domain="production-ml">
-                <a href="https://intellegens.com/webinar-12-nov-empowering-advanced-material-and-process-development-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2024</h6>
-                            <h5 class="card-title">Empowering Advanced Material & Process Development</h5>
-                            <p class="card-text small">Intellegens Webinar Recording</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy" data-domain="optimization">
-                <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Case Study, 2023</h6>
-                            <h5 class="card-title">ML for Food Formulation at Yili</h5>
-                            <p class="card-text small">Food & beverage optimization</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy" data-domain="manufacturing">
-                <a href="https://intellegens.com/wp-content/uploads/2022/02/AMRC-composite-drilling-case-study.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">White Paper, 2022</h6>
-                            <h5 class="card-title">AMRC Composite Drilling Optimization</h5>
-                            <p class="card-text small">Aerospace manufacturing with AMRC</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy" data-domain="manufacturing">
-                <a href="https://intellegens.com/understanding-and-improving-steel-performance-with-ocas/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Case Study, 2022</h6>
-                            <h5 class="card-title">Understanding Steel Performance with OCAS</h5>
-                            <p class="card-text small">ArcelorMittal research partnership</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.mdpi.com/2073-4352/10/7/627" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020 | 86 citations</h6>
-                            <h5 class="card-title">Directional Dendritic Growth and Primary Spacing—A Review</h5>
-                            <p class="card-text small">Crystals (MDPI)</p>
                         </div>
                     </div>
                 </a>
@@ -1034,6 +1015,17 @@
                     </div>
                 </a>
             </div>
+            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
+                <a href="https://www.mdpi.com/2073-4352/10/7/627" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020 | 86 citations</h6>
+                            <h5 class="card-title">Directional Dendritic Growth and Primary Spacing—A Review</h5>
+                            <p class="card-text small">Crystals (MDPI)</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
         
         <div class="text-center mt-4">
@@ -1045,21 +1037,16 @@
     // Portfolio filter functionality
     document.addEventListener('DOMContentLoaded', function() {
         const filterBtns = document.querySelectorAll('.filter-btn');
-        const domainBtns = document.querySelectorAll('.domain-btn');
         const items = document.querySelectorAll('.portfolio-item');
         
-        let currentTypeFilter = 'clientwork';
-        let currentDomainFilter = 'all';
+        let currentTypeFilter = 'all';
         
         function applyFilters() {
             items.forEach(item => {
                 const itemTypes = (item.dataset.type || '').split(' ');
-                const itemDomain = item.dataset.domain || '';
-                
                 let typeMatch = currentTypeFilter === 'all' || itemTypes.some(t => t === currentTypeFilter);
-                let domainMatch = currentDomainFilter === 'all' || itemDomain === currentDomainFilter;
                 
-                if (typeMatch && domainMatch) {
+                if (typeMatch) {
                     item.classList.remove('hidden');
                 } else {
                     item.classList.add('hidden');
@@ -1071,15 +1058,6 @@
             btn.addEventListener('click', function() {
                 currentTypeFilter = this.dataset.filter;
                 filterBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                applyFilters();
-            });
-        });
-        
-        domainBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                currentDomainFilter = this.dataset.domain;
-                domainBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
                 applyFilters();
             });
