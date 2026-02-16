@@ -18,8 +18,8 @@
             </button>
             <div class="nav-links">
                 <a href="${prefix}#about">About</a>
-                <a href="${prefix}#services">Speaking</a>
-                <a href="${prefix}#talks">Portfolio</a>
+                <a href="${prefix}#portfolio">Portfolio</a>
+                <a href="${prefix}#expertise">Expertise</a>
                 <div class="nav-dropdown">
                     <button class="nav-dropdown-toggle">
                         More
@@ -30,13 +30,12 @@
                     <div class="nav-dropdown-menu">
                         <a href="${prefix}#stats-section">Track Record</a>
                         <a href="${prefix}#tech-stack">Tech Stack</a>
-                        <a href="${prefix}#expertise">Expertise</a>
                         <a href="${prefix}#faq">FAQ</a>
                         <a href="${prefix}#contact">Contact</a>
                     </div>
                 </div>
                 <a href="cv.html"${isCV ? ' class="active"' : ''}>CV</a>
-                <a href="mailto:joelstrickland.ai@gmail.com?subject=Speaking%20or%20Collaboration" class="btn-contact">Contact</a>
+                <a href="mailto:joelstrickland.ai@gmail.com" class="btn-contact">Contact</a>
             </div>
         </div>
     </nav>
