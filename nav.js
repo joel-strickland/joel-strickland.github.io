@@ -31,6 +31,7 @@
                         <a href="${prefix}#stats-section">Track Record</a>
                         <a href="${prefix}#tech-stack">Tech Stack</a>
                         <a href="${prefix}#expertise">Expertise</a>
+                        <a href="${prefix}#faq">FAQ</a>
                         <a href="${prefix}#publications">Research</a>
                         <a href="${prefix}#working-together">Working Together</a>
                     </div>

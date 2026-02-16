@@ -1181,7 +1181,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Agentic AI Systems</h5>
-                        <p class="card-text">Autonomous agents with LLMs, multi-agent architectures, and enterprise deployment considerations.</p>
+                        <p class="card-text">Autonomous agents with LLMs, multi-agent architectures, and enterprise deployment. Built <strong>Alchemite Insight</strong> (AI for science agent) and <strong>NOA</strong> (full-stack internal prototype) at Intellegens.</p>
                     </div>
                 </div>
             </div>
@@ -1286,6 +1286,7 @@
                         <span class="tech-badge">Multi-Agent Systems</span>
                         <span class="tech-badge">RAG Systems</span>
                         <span class="tech-badge">MCP Protocol</span>
+                        <span class="tech-badge">Agent Development Kit</span>
                         <span class="tech-badge">PyTorch</span>
                         <span class="tech-badge">TensorFlow</span>
                         <span class="tech-badge">Scikit-Learn</span>
@@ -1332,6 +1333,89 @@
                         <span class="tech-badge">Consumer Goods</span>
                         <span class="tech-badge">Food & Beverage</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container section" id="faq">
+        <div class="section-label">Common Questions</div>
+        <h2>FAQ</h2>
+        <style>
+            .faq-item {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 24px;
+                margin-bottom: 16px;
+            }
+            .faq-item h5 {
+                color: var(--text);
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+            .faq-item p {
+                color: var(--text-2);
+                margin-bottom: 0;
+            }
+            .faq-item p + p {
+                margin-top: 12px;
+            }
+            .faq-item ul {
+                color: var(--text-2);
+                margin-top: 12px;
+                margin-bottom: 0;
+                padding-left: 20px;
+            }
+            .faq-item li {
+                margin-bottom: 6px;
+            }
+            .faq-highlight {
+                color: var(--accent);
+                font-weight: 600;
+            }
+        </style>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="faq-item">
+                    <h5>What's your consulting availability?</h5>
+                    <p>I'm launching my independent consultancy through <strong>Promethean Technologies</strong>. I'm available for new client work—whether advisory, project-based, or fractional leadership engagements.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h5>How does client work relate to your Intellegens experience?</h5>
+                    <p>All enterprise client work listed (Rolls-Royce, AstraZeneca, Johnson Matthey, etc.) was delivered through my employer, <strong>Intellegens</strong>, where I led technical pre-sales and agentic AI development. I didn't engage these clients independently.</p>
+                    <p>References can be provided through Intellegens/employer channels where enterprise NDAs apply.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h5>What's your IP and conflict policy?</h5>
+                    <p>Client work stays with the client. I don't reuse proprietary code, data, or models across engagements without explicit agreement. Standard confidentiality terms apply, and I'm clear about boundaries up front.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="faq-item">
+                    <h5>What agentic AI have you actually built?</h5>
+                    <p>Two production-grade systems at Intellegens:</p>
+                    <ul>
+                        <li><strong>Alchemite Insight</strong> — An AI for science agent in Intellegens' front-end product. Powered by MCP tools connected to their API, using Gemini on GCP Vertex AI with Google's Agent Development Kit. I led the core algorithm and backend development.</li>
+                        <li><strong>NOA (No Ordinary Assistant)</strong> — A full-stack internal prototype: algorithm, backend, front-end, client research, and internal testing. Learnings from NOA directly informed the design of Insight.</li>
+                    </ul>
+                </div>
+                
+                <div class="faq-item">
+                    <h5>How do you evaluate agentic systems?</h5>
+                    <p>Beyond "does the demo look good"—I focus on:</p>
+                    <ul>
+                        <li><strong>Task success metrics</strong> — structured evaluation of completion, correctness, and failure modes</li>
+                        <li><strong>Tool permissioning & guardrails</strong> — what the agent can/can't do, and how you enforce it</li>
+                        <li><strong>Regression testing</strong> — catching breakages as models/prompts evolve</li>
+                        <li><strong>Audit & observability</strong> — logging decisions, tool calls, and reasoning traces</li>
+                        <li><strong>Monitoring in production</strong> — latency, cost, drift, user feedback loops</li>
+                    </ul>
                 </div>
             </div>
         </div>
