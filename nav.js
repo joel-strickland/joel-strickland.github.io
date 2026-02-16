@@ -50,35 +50,35 @@
     // ============================================
     // Content defined once, templates adapt to page context
     const workingTogetherContent = {
-        consulting: {
-            title: 'Speaking &amp; Training',
-            text: 'Available for workshops, talks, and training on ML, uncertainty, and decision intelligence. Happy to discuss collaboration and education opportunities.'
-        },
-        delivery: {
+        role: {
             title: 'Current Role',
-            text: '<strong>Head of Agentic AI at Intellegens</strong>. All enterprise client work delivered through Intellegens. Visiting Expert at University of Leicester.'
+            text: '<strong>Head of Agentic AI at Intellegens</strong> (Cambridge, UK). Visiting Expert at University of Leicester.'
         },
-        firstCall: {
-            title: 'Get in Touch',
-            text: "Contact me about speaking engagements, workshops, or collaboration opportunities."
+        focus: {
+            title: 'Focus Areas',
+            text: 'Uncertainty-aware ML, decision intelligence, agentic AI systems, and data-to-insight solutions for enterprise R&D.'
+        },
+        contact: {
+            title: 'Contact',
+            text: 'Questions or want to connect? <a href="mailto:joelstrickland.ai@gmail.com" style="color: var(--accent-2);">joelstrickland.ai@gmail.com</a>'
         }
     };
     
     const workingTogetherHTML = isCV ? `
     <div id="working-together" style="margin: 40px 0;">
-        <h2>Contact</h2>
+        <h2>At a Glance</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
             <div style="flex: 1; min-width: 200px;">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.consulting.title}</h5>
-                <p class="small" style="color: var(--text-3);">${workingTogetherContent.consulting.text}</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.role.title}</h5>
+                <p class="small" style="color: var(--text-3);">${workingTogetherContent.role.text}</p>
             </div>
             <div style="flex: 1; min-width: 200px;">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.delivery.title}</h5>
-                <p class="small" style="color: var(--text-3);">${workingTogetherContent.delivery.text}</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.focus.title}</h5>
+                <p class="small" style="color: var(--text-3);">${workingTogetherContent.focus.text}</p>
             </div>
             <div style="flex: 1; min-width: 200px;">
-                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.firstCall.title}</h5>
-                <p class="small" style="color: var(--text-3);">${workingTogetherContent.firstCall.text}</p>
+                <h5 style="font-size: 1rem; margin-bottom: 8px;">${workingTogetherContent.contact.title}</h5>
+                <p class="small" style="color: var(--text-3);">${workingTogetherContent.contact.text}</p>
             </div>
         </div>
     </div>

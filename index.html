@@ -574,8 +574,8 @@
         
         <!-- Filter buttons -->
         <div class="portfolio-filters mb-4">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="casestudy">Case Studies</button>
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn active" data-filter="casestudy">Case Studies</button>
             <button class="filter-btn" data-filter="publication">Publications</button>
             <button class="filter-btn" data-filter="writing">Writing</button>
             <button class="filter-btn" data-filter="webinar">Webinars</button>
@@ -935,7 +935,7 @@
         const filterBtns = document.querySelectorAll('.filter-btn');
         const items = document.querySelectorAll('.portfolio-item');
         
-        let currentTypeFilter = 'all';
+        let currentTypeFilter = 'casestudy';
         
         function applyFilters() {
             items.forEach(item => {
@@ -1310,7 +1310,7 @@
     <div class="container section text-center" id="contact">
         <div class="section-label">Get in Touch</div>
         <h2>Contact</h2>
-        <p class="lead" style="margin: 0 auto 24px; max-width: 600px;">Questions about my work or interested in connecting? Drop me a line.</p>
+        <p class="lead" style="margin: 0 auto 24px; max-width: 600px;">Questions about my work? Happy to hear from you.</p>
         <a href="mailto:joelstrickland.ai@gmail.com" class="btn btn-primary btn-lg" style="border-radius: 10px; padding: 12px 32px; font-weight: 600;">Email Me</a>
         <a href="cv.html" class="btn btn-outline-secondary btn-lg" style="border-radius: 10px; padding: 12px 32px; margin-left: 10px;">View Full CV</a>
     </div>
