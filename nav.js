@@ -18,7 +18,7 @@
             </button>
             <div class="nav-links">
                 <a href="${prefix}#about">About</a>
-                <a href="${prefix}#services">Services</a>
+                <a href="${prefix}#services">Speaking</a>
                 <a href="${prefix}#talks">Portfolio</a>
                 <div class="nav-dropdown">
                     <button class="nav-dropdown-toggle">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <a href="cv.html"${isCV ? ' class="active"' : ''}>CV</a>
-                <a href="mailto:joelstrickland.ai@gmail.com?subject=Consulting%20Inquiry" class="btn-contact">Book a Call</a>
+                <a href="mailto:joelstrickland.ai@gmail.com?subject=Speaking%20or%20Collaboration" class="btn-contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -53,16 +53,16 @@
     // Content defined once, templates adapt to page context
     const workingTogetherContent = {
         consulting: {
-            title: 'Independent Consulting',
-            text: 'I consult through <strong>Promethean Technologies Ltd</strong>. I operate as a trusted advisor, not a vendor, and am deeply invested in your success. I provide strategic guidance, technical expertise, and hands-on support to help you achieve your goals.'
+            title: 'Speaking &amp; Training',
+            text: 'Available for workshops, talks, and training on ML, uncertainty, and decision intelligence. Happy to discuss collaboration and education opportunities.'
         },
         delivery: {
-            title: 'Delivery Model',
-            text: 'Project-based with agreed milestones and deadlines. Typical response time: &lt;24 hours. Async-first with scheduled syncs as needed. Fully remote.'
+            title: 'Current Role',
+            text: '<strong>Head of Agentic AI at Intellegens</strong>. All enterprise client work delivered through Intellegens. Visiting Expert at University of Leicester.'
         },
         firstCall: {
-            title: 'First Call',
-            text: "We'll align on scope, deliverables, timeline, and acceptance criteria."
+            title: 'Get in Touch',
+            text: "Contact me about speaking engagements, workshops, or collaboration opportunities."
         }
     };
     
@@ -86,7 +86,7 @@
     </div>
     ` : `
     <div class="container section" id="working-together">
-        <div class="section-label">Logistics</div>
+        <div class="section-label">Contact</div>
         <h2>Working Together</h2>
         <div class="row">
             <div class="col-md-4 mb-3">
@@ -117,7 +117,7 @@
     const footerHTML = `
     <footer class="text-center">
         <div class="container">
-            <p style="margin-bottom: 8px;">Consulting via <strong>Promethean Technologies</strong></p>
+            <p style="margin-bottom: 8px;"><strong>Joel Strickland, PhD, CEng</strong></p>
             <p>&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
             <p>
                 <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="color: white; margin: 0 10px;">LinkedIn</a> |
