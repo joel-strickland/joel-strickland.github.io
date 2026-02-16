@@ -238,14 +238,13 @@
             transform: translateY(-1px) scale(1);
         }
         
-        /* Sections */
+        /* Sections - Reduced padding for better flow */
         .section {
-            padding: 20px 0 300px;
+            padding: 60px 0 80px;
             scroll-margin-top: 60px;
-            min-height: 80vh;
         }
         @media (max-width: 768px) {
-            .section { padding: 16px 0 200px; min-height: auto; }
+            .section { padding: 40px 0 60px; }
         }
         .section h2 {
             font-size: 2rem;
@@ -500,7 +499,7 @@
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
-    <a href="#about" class="skip-link">Skip to main content</a>
+    <a href="#services" class="skip-link">Skip to main content</a>
     
     <!-- Navigation injected by nav.js -->
     
@@ -535,41 +534,10 @@
         </div>
     </div>
 
-    <!-- Track Record Section -->
-    <div class="container section" id="stats-section">
-        <div class="section-label">Overview</div>
-        <h2>Track Record</h2>
-        <div class="row">
-            <div class="col-md-3 text-center mb-4">
-                <div class="stats-number" data-target="100" data-suffix="+">100+</div>
-                <p>Technical Demos & Workshops</p>
-                <p class="small text-muted" style="font-size: 0.75rem;">Presentations, training sessions</p>
-            </div>
-            <div class="col-md-3 text-center mb-4">
-                <div class="stats-number" data-target="50" data-suffix="+">50+</div>
-                <p>Enterprise Projects</p>
-                <p class="small text-muted" style="font-size: 0.75rem;">Delivered through industry roles</p>
-            </div>
-            <div class="col-md-3 text-center mb-4">
-                <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;" title="View on Google Scholar">
-                    <div class="stats-number" data-target="290" data-suffix="+" style="cursor: pointer;">290+</div>
-                    <p style="text-decoration: underline; text-decoration-style: dotted;">Citations</p>
-                    <p class="small text-muted" style="font-size: 0.75rem;">Peer-reviewed publications</p>
-                </a>
-            </div>
-            <div class="col-md-3 text-center mb-4">
-                <div class="stats-number" id="years-counter" data-target="9.4">9.4</div>
-                <p>Years in ML/AI</p>
-                <p class="small text-muted" style="font-size: 0.75rem;">Including consultancy</p>
-            </div>
-        </div>
-        <p class="text-center text-muted">Project experience includes work with Rolls-Royce, AstraZeneca, Johnson Matthey, Voestalpine, FUCHS, NASA, BAT, and Boeing</p>
-    </div>
-
-    <!-- What You Get Section -->
+    <!-- What You Get Section (Problem framing - now first after hero) -->
     <div class="container section" id="what-you-get">
-        <div class="section-label">The Outcome</div>
-        <h2>What You Get</h2>
+        <div class="section-label">The Problem</div>
+        <h2>Why AI Projects Stall</h2>
         <div class="highlight">
             <p class="lead" style="margin-bottom: 24px;">Most AI programs don't fail because the model is bad. They stall because:</p>
             <ul style="list-style: none; padding-left: 0;">
@@ -591,17 +559,6 @@
                 </li>
             </ul>
             <p class="lead" style="margin-top: 24px;">I help you choose the right use case, build the right system, and deploy it—including the "enterprise hard parts" (workflow integration, validation, monitoring, and adoption).</p>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <div class="container section" id="about">
-        <div class="section-label">Background</div>
-        <h2>About</h2>
-        <div class="highlight">
-            <p class="lead" style="margin-bottom: 20px;">I'm a machine learning consultant focused on agentic AI systems, production ML pipelines, and enterprise adoption. <span id="about-years">9.4</span> years in ML/AI and consultancy—from PhD research with Rolls-Royce through to 5 years of industrial AI delivery across pharma, chemicals, materials, manufacturing, and consumer goods.</p>
-            <p style="margin-bottom: 20px; color: var(--text-2);">I'm also a Visiting Expert at the University of Leicester (2024–present).</p>
-            <p style="color: var(--text-2);">My approach is platform-agnostic—I can work with your existing stack, support vendor/platform evaluation, and help your team implement what you choose.</p>
         </div>
     </div>
 
@@ -749,262 +706,10 @@
         </div>
     </div>
 
-    <!-- Vendor-Neutral Positioning Section -->
-    <div class="container section" id="vendor-neutral">
-        <div class="section-label">Working With You</div>
-        <h2>Platform-Agnostic Approach</h2>
-        <div class="highlight">
-            <p class="lead" style="margin-bottom: 20px;">If you already use a platform (or are considering one), I'm not competing with it—I help you get value from it faster:</p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
-                    Define the workflows worth automating
-                </li>
-                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
-                    Design integration into your systems and data
-                </li>
-                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
-                    Build the evaluation/validation approach
-                </li>
-                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
-                    Train teams and support adoption
-                </li>
-            </ul>
-            <p style="color: var(--text-2); margin-top: 20px;">If you haven't chosen a platform, I can run a vendor-neutral evaluation and help you select an approach with clear success criteria.</p>
-        </div>
-    </div>
-
-    <!-- Technology Stack Section -->
-    <div class="container section" id="tech-stack">
-        <div class="section-label">Technical Skills</div>
-        <h2>Technology Stack</h2>
-        <style>
-            .tech-category { margin-bottom: 28px; }
-            .tech-category h6 { 
-                color: var(--text-3); 
-                font-size: 0.75rem; 
-                text-transform: uppercase; 
-                letter-spacing: 0.12em; 
-                margin-bottom: 14px; 
-                font-weight: 700; 
-            }
-            .tech-badges { display: flex; flex-wrap: wrap; gap: 10px; }
-            .tech-badge { 
-                background: var(--surface);
-                border: 1px solid var(--border);
-                padding: 10px 18px; 
-                border-radius: 8px; 
-                font-size: 0.9rem; 
-                font-weight: 600;
-                color: var(--text-2);
-                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                position: relative;
-                overflow: hidden;
-            }
-            .tech-badge::before {
-                content: '';
-                position: absolute;
-                top: 0; left: 0; right: 0; bottom: 0;
-                background: linear-gradient(135deg, var(--accent), var(--accent-2));
-                opacity: 0;
-                transition: opacity 0.2s ease;
-                z-index: -1;
-            }
-            .tech-badge:hover { 
-                transform: translateY(-3px) scale(1.02);
-                border-color: transparent;
-                color: #0B0B0B;
-                box-shadow: 0 8px 20px rgba(0,0,0,.3), 0 0 20px var(--glow-orange);
-            }
-            .tech-badge:hover::before {
-                opacity: 1;
-            }
-        </style>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="tech-category">
-                    <h6>AI & Machine Learning</h6>
-                    <div class="tech-badges">
-                        <span class="tech-badge">LangChain</span>
-                        <span class="tech-badge">LangGraph</span>
-                        <span class="tech-badge">Multi-Agent Systems</span>
-                        <span class="tech-badge">RAG Systems</span>
-                        <span class="tech-badge">MCP Protocol</span>
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">TensorFlow</span>
-                        <span class="tech-badge">Scikit-Learn</span>
-                        <span class="tech-badge">Conformal Prediction</span>
-                        <span class="tech-badge">Uncertainty Quantification</span>
-                        <span class="tech-badge">Bayesian Optimization</span>
-                        <span class="tech-badge">Active Learning</span>
-                        <span class="tech-badge">Federated Learning</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h6>Languages & Frameworks</h6>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">NumPy</span>
-                        <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">SQL</span>
-                        <span class="tech-badge">REST APIs</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="tech-category">
-                    <h6>Infrastructure & LLMs</h6>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">GCP</span>
-                        <span class="tech-badge">Vertex AI</span>
-                        <span class="tech-badge">Gemini</span>
-                        <span class="tech-badge">Claude</span>
-                        <span class="tech-badge">OpenAI</span>
-                        <span class="tech-badge">Git</span>
-                        <span class="tech-badge">CI/CD</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h6>Industry Background</h6>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Materials Science</span>
-                        <span class="tech-badge">Pharmaceuticals</span>
-                        <span class="tech-badge">Chemicals</span>
-                        <span class="tech-badge">Manufacturing</span>
-                        <span class="tech-badge">Consumer Goods</span>
-                        <span class="tech-badge">Food & Beverage</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Expertise Section -->
-    <div class="container section" id="expertise">
-        <div class="section-label">What I Do</div>
-        <h2>Areas of Expertise</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Agentic AI Systems</h5>
-                        <p class="card-text">Autonomous agents with LLMs, multi-agent architectures, and enterprise deployment considerations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Production ML Systems</h5>
-                        <p class="card-text">Robust ML pipelines from development to deployment, monitoring, and maintenance.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Data-to-Insight Solutions</h5>
-                        <p class="card-text">Turning messy, complex data into actionable decisions—especially industrial datasets.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Enterprise Enablement</h5>
-                        <p class="card-text">Technical workshops, training, and translating business requirements into delivery roadmaps.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Technical Pre-Sales</h5>
-                        <p class="card-text">Leading technical demonstrations and building custom proofs-of-concept for enterprise stakeholders.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Thought Leadership</h5>
-                        <p class="card-text">Speaking at webinars and conferences on AI/ML, LLMs, and agentic AI transformation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Research Highlights Section -->
-    <div class="container section" id="publications">
-        <div class="section-label">Research</div>
-        <h2>Research Highlights</h2>
-        <p class="text-muted mb-3" style="font-size: 1.05rem;">Supporting proof, not the pitch</p>
-        <p class="text-muted mb-4">290+ citations | 20+ peer-reviewed papers | h-index: 9</p>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <a href="https://www.mdpi.com/2073-4352/10/7/627" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Crystals, 2020 | 86 citations</h6>
-                            <h5 class="card-title">On directional dendritic growth and primary spacing—A review</h5>
-                            <p class="card-text small">J Strickland, B Nenchev, H Dong</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3">
-                <a href="https://www.sciencedirect.com/science/article/pii/S1359645421005024" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Acta Materialia, 2021 | 33 citations</h6>
-                            <h5 class="card-title">On the origin of mosaicity in directionally solidified Ni-base superalloys</h5>
-                            <p class="card-text small">J Strickland, B Nenchev, K Tassenberg et al.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <a href="https://www.sciencedirect.com/science/article/pii/S2214860424007577" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Additive Manufacturing, 2025 | 22 citations</h6>
-                            <h5 class="card-title">Rapid residual stress simulation in additive manufacturing through ML</h5>
-                            <p class="card-text small">R Zhang, J Strickland, X Hou et al.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3">
-                <a href="https://www.nature.com/articles/s44172-025-00350-2" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Communications Engineering, 2025</h6>
-                            <h5 class="card-title">Degrees of uncertainty: conformal deep learning for core body temperature</h5>
-                            <p class="card-text small">J Strickland, M Ghisoni, H Marshall et al.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">View All Publications</a>
-        </div>
-    </div>
-
-    <!-- Portfolio Section -->
-    <div class="container section" id="talks">
-        <div class="section-label">Work & Thought Leadership</div>
-        <h2>Portfolio</h2>
+    <!-- Portfolio Section (Moved up - proof earlier) -->
+    <div class="container section" id="portfolio">
+        <div class="section-label">Proof</div>
+        <h2>Client Work & Portfolio</h2>
         <p class="text-muted mb-4">Selected client work, publications, talks, webinars, and articles.</p>
         
         <!-- Filter buttons -->
@@ -1146,7 +851,6 @@
             </div>
             
             <!-- CONTENT (Webinars, Writing, Talks, Publications) -->
-            <!-- 2025 -->
             <div class="col-md-6 mb-3 portfolio-item" data-type="webinar" data-domain="agentic">
                 <a href="https://intellegens.com/watch-recording-can-agentic-ai-transform-chemicals-and-materials-rd/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
@@ -1231,15 +935,13 @@
                     </div>
                 </a>
             </div>
-            
-            <!-- 2024 -->
             <div class="col-md-6 mb-3 portfolio-item" data-type="publication" data-domain="optimization">
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-57808-3_3" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Book Chapter, 2024</h6>
                             <h5 class="card-title">Adaptive Experimental Design</h5>
-                            <p class="card-text small">The Digital Transformation of Product Formulation (Springer) | 1 citation</p>
+                            <p class="card-text small">The Digital Transformation of Product Formulation (Springer)</p>
                         </div>
                     </div>
                 </a>
@@ -1250,7 +952,7 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Journal, 2024</h6>
                             <h5 class="card-title">Nicotine Pharmacokinetic Modelling for E-Cigarettes</h5>
-                            <p class="card-text small">BioData Mining | 1 citation</p>
+                            <p class="card-text small">BioData Mining</p>
                         </div>
                     </div>
                 </a>
@@ -1277,28 +979,6 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="talk" data-domain="optimization">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Conference, 2024</h6>
-                        <h5 class="card-title">AIChE Spring Meeting 2024</h5>
-                        <p class="card-text small">ML for Chemicals & Materials R&D</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 2023 -->
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication" data-domain="production-ml">
-                <a href="https://pubs.acs.org/doi/10.1021/acs.jcim.3c01533" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2023</h6>
-                            <h5 class="card-title">Imputation vs QSAR in Toxicology Data Modeling</h5>
-                            <p class="card-text small">J. Chemical Information and Modeling | 9 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
             <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy" data-domain="optimization">
                 <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
@@ -1310,95 +990,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="writing" data-domain="production-ml">
-                <a href="https://intercalationstation.substack.com/p/revolutionising-energy-storage-the" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Article, 2023</h6>
-                            <h5 class="card-title">Revolutionising Energy Storage with Machine Learning</h5>
-                            <p class="card-text small">Intercalation Station (Substack)</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="writing" data-domain="production-ml">
-                <a href="https://intellegens.com/three-ways-ai-can-switch-on-battery-research/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Article, 2023</h6>
-                            <h5 class="card-title">Three Ways AI Can Switch on Battery Research</h5>
-                            <p class="card-text small">Intellegens Blog</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar" data-domain="optimization">
-                <a href="https://intellegens.com/webinar-design-of-experiments-made-easy-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2023</h6>
-                            <h5 class="card-title">Design of Experiments Made Easy with ML</h5>
-                            <p class="card-text small">Intellegens Webinar Recording</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar" data-domain="optimization">
-                <a href="https://intellegens.com/webinar-machine-learning-for-formulation-development-a-food-industry-case-study/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2023</h6>
-                            <h5 class="card-title">ML for Formulation Development: Food Industry</h5>
-                            <p class="card-text small">Intellegens Webinar Recording</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar" data-domain="manufacturing">
-                <a href="https://intellegens.com/webinar-15-mar-optimising-additive-manufacturing-processes-with-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2023</h6>
-                            <h5 class="card-title">Optimising Additive Manufacturing with ML</h5>
-                            <p class="card-text small">Intellegens Webinar Recording</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar" data-domain="production-ml">
-                <a href="https://www.uk-cpi.com/cpi-batteries-webinar" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2023</h6>
-                            <h5 class="card-title">ML for Battery Development</h5>
-                            <p class="card-text small">CPI Batteries Webinar</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="talk" data-domain="manufacturing">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Conference, 2023</h6>
-                        <h5 class="card-title">Metallurgical Optimisation with Machine Learning</h5>
-                        <p class="card-text small">3rd Int'l Forum on Intelligent Metallurgy, Beijing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="talk" data-domain="production-ml">
-                <a href="https://www.researchgate.net/publication/376722209_AI_in_Action_Interactive_Demonstration_of_Material_Optimisation_for_EV_Batteries" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Conference, 2023</h6>
-                            <h5 class="card-title">AI in Action: Material Optimisation for EV Batteries</h5>
-                            <p class="card-text small">CATMAT Conference</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <!-- 2022 -->
-            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy" data-domain="manufacturing">
                 <a href="https://intellegens.com/wp-content/uploads/2022/02/AMRC-composite-drilling-case-study.pdf" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -1409,7 +1001,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy">
+            <div class="col-md-6 mb-3 portfolio-item" data-type="casestudy" data-domain="manufacturing">
                 <a href="https://intellegens.com/understanding-and-improving-steel-performance-with-ocas/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -1420,195 +1012,32 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
-                <a href="https://intellegens.com/webinar-how-fuchs-apply-machine-learning-to-lubricant-formulation-development/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2022</h6>
-                            <h5 class="card-title">FUCHS: ML for Lubricant Formulation</h5>
-                            <p class="card-text small">Intellegens Webinar Recording</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="webinar">
-                <a href="https://intellegens.com/webinar-transforming-materials-and-process-development-through-machine-learning/" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Webinar, 2022</h6>
-                            <h5 class="card-title">Transforming Materials & Process Development</h5>
-                            <p class="card-text small">Webinar with Lucideon</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="talk">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Conference, 2022</h6>
-                        <h5 class="card-title">Information Alchemy: Extracting Value from R&D Data</h5>
-                        <p class="card-text small">Advanced Materials Show</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 2021 -->
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.sciencedirect.com/science/article/pii/S1359645421005024" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2021</h6>
-                            <h5 class="card-title">Origin of Mosaicity in Ni-Base Superalloys</h5>
-                            <p class="card-text small">Acta Materialia | 33 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.mdpi.com/1996-1944/14/6/1269" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2021</h6>
-                            <h5 class="card-title">GAKTpore: Stereological Characterisation for Biomedical Applications</h5>
-                            <p class="card-text small">Materials | 1 citation</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://link.springer.com/chapter/10.1007/978-3-030-65261-6_108" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Book Chapter, 2021</h6>
-                            <h5 class="card-title">Stereological Characterisation of Single Crystal Alloys</h5>
-                            <p class="card-text small">TMS 2021 Proceedings (Springer) | 2 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://hdl.handle.net/2381/12975" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">PhD Thesis, 2021</h6>
-                            <h5 class="card-title">Patterns in Directionally Solidified Alloys</h5>
-                            <p class="card-text small">University of Leicester</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://link.springer.com/chapter/10.1007/978-3-030-65261-6_19" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Book Chapter, 2021</h6>
-                            <h5 class="card-title">Porous Frit Vents for Radioisotopic Space Power Systems</h5>
-                            <p class="card-text small">TMS 2021 Proceedings (Springer) | 1 citation</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <!-- 2020 -->
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.sciencedirect.com/science/article/pii/S0143816619318032" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020</h6>
-                            <h5 class="card-title">Femtosecond Laser Machining of CMSX-4 Superalloy</h5>
-                            <p class="card-text small">Optics and Lasers in Engineering | 31 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://link.springer.com/article/10.1007/s40195-020-01077-z" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020</h6>
-                            <h5 class="card-title">Magnetocaloric Effect of La(Fe,Al)13 Alloys</h5>
-                            <p class="card-text small">Acta Metallurgica Sinica | 9 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
             <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
                 <a href="https://www.mdpi.com/2073-4352/10/7/627" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020 | 86 citations</h6>
                             <h5 class="card-title">Directional Dendritic Growth and Primary Spacing—A Review</h5>
-                            <p class="card-text small">Crystals | 86 citations</p>
+                            <p class="card-text small">Crystals (MDPI)</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.nature.com/articles/s41598-020-77572-3" target="_blank" rel="noopener noreferrer" class="card-link">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1359645421005024" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020</h6>
-                            <h5 class="card-title">2D Bragg-Dip Mapping by Neutron Imaging on IMAT@ISIS</h5>
-                            <p class="card-text small">Scientific Reports | 19 citations</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2021 | 33 citations</h6>
+                            <h5 class="card-title">Origin of Mosaicity in Ni-Base Superalloys</h5>
+                            <p class="card-text small">Acta Materialia</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.sciencedirect.com/science/article/pii/S1359645420305103" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020</h6>
-                            <h5 class="card-title">Hexagonality in Single Crystal Solidification</h5>
-                            <p class="card-text small">Acta Materialia | 30 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.mdpi.com/2313-433X/6/4/19" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2020</h6>
-                            <h5 class="card-title">DenMap: Automatic Recognition of Dendritic Structures</h5>
-                            <p class="card-text small">Journal of Imaging | 28 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://www.sciencedirect.com/science/article/pii/S1044580320311470" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Journal, 2021</h6>
-                            <h5 class="card-title">DenMap Feature Extraction: Automation and Application</h5>
-                            <p class="card-text small">Materials Characterization | 10 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://iopscience.iop.org/article/10.1088/1757-899X/861/1/012057" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Conference, 2020</h6>
-                            <h5 class="card-title">Applications of Pattern Recognition for Dendritic Microstructures</h5>
-                            <p class="card-text small">IOP Conference Series | 8 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mb-3 portfolio-item" data-type="publication">
-                <a href="https://iopscience.iop.org/article/10.1088/1757-899X/947/1/012006" target="_blank" rel="noopener noreferrer" class="card-link">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Conference, 2020</h6>
-                            <h5 class="card-title">Tracking Primary Dendritic Arm Evolution in CMSX-10</h5>
-                            <p class="card-text small">IOP Conference Series | 2 citations</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">View All Publications</a>
         </div>
     </div>
     
@@ -1627,23 +1056,9 @@
                 const itemTypes = (item.dataset.type || '').split(' ');
                 const itemDomain = item.dataset.domain || '';
                 
-                // Check type filter
-                let typeMatch = false;
-                if (currentTypeFilter === 'all') {
-                    typeMatch = true;
-                } else {
-                    typeMatch = itemTypes.some(t => t === currentTypeFilter);
-                }
+                let typeMatch = currentTypeFilter === 'all' || itemTypes.some(t => t === currentTypeFilter);
+                let domainMatch = currentDomainFilter === 'all' || itemDomain === currentDomainFilter;
                 
-                // Check domain filter
-                let domainMatch = false;
-                if (currentDomainFilter === 'all') {
-                    domainMatch = true;
-                } else {
-                    domainMatch = itemDomain === currentDomainFilter;
-                }
-                
-                // Show/hide based on both filters
                 if (typeMatch && domainMatch) {
                     item.classList.remove('hidden');
                 } else {
@@ -1655,11 +1070,8 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 currentTypeFilter = this.dataset.filter;
-                
-                // Update active button
                 filterBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                
                 applyFilters();
             });
         });
@@ -1667,25 +1079,255 @@
         domainBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 currentDomainFilter = this.dataset.domain;
-                
-                // Update active button
                 domainBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                
                 applyFilters();
             });
         });
         
-        // Apply initial filter (Client Work is default)
         applyFilters();
     });
     </script>
 
+    <!-- Platform-Agnostic Section -->
+    <div class="container section" id="vendor-neutral">
+        <div class="section-label">Working With You</div>
+        <h2>Platform-Agnostic Approach</h2>
+        <div class="highlight">
+            <p class="lead" style="margin-bottom: 20px;">If you already use a platform (or are considering one), I'm not competing with it—I help you get value from it faster:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Define the workflows worth automating
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Design integration into your systems and data
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Build the evaluation/validation approach
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 28px; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                    Train teams and support adoption
+                </li>
+            </ul>
+            <p style="color: var(--text-2); margin-top: 20px;">If you haven't chosen a platform, I can run a vendor-neutral evaluation and help you select an approach with clear success criteria.</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container section" id="about">
+        <div class="section-label">Background</div>
+        <h2>About</h2>
+        <div class="highlight">
+            <p class="lead" style="margin-bottom: 20px;">I'm a machine learning consultant focused on agentic AI systems, production ML pipelines, and enterprise adoption. <span id="about-years">9.4</span> years in ML/AI and consultancy—from PhD research with Rolls-Royce through to 5 years of industrial AI delivery across pharma, chemicals, materials, manufacturing, and consumer goods.</p>
+            <p style="margin-bottom: 20px; color: var(--text-2);">I'm also a Visiting Expert at the University of Leicester (2024–present).</p>
+            <p style="color: var(--text-2);">My approach is platform-agnostic—I can work with your existing stack, support vendor/platform evaluation, and help your team implement what you choose.</p>
+        </div>
+    </div>
+
+    <!-- Track Record Section -->
+    <div class="container section" id="stats-section">
+        <div class="section-label">Track Record</div>
+        <h2>By the Numbers</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <div class="stats-number" data-target="100" data-suffix="+">100+</div>
+                <p>Technical Demos & Workshops</p>
+                <p class="small text-muted" style="font-size: 0.75rem;">Presentations, training sessions</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="stats-number" data-target="50" data-suffix="+">50+</div>
+                <p>Enterprise Projects</p>
+                <p class="small text-muted" style="font-size: 0.75rem;">Delivered through industry roles</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;" title="View on Google Scholar">
+                    <div class="stats-number" data-target="290" data-suffix="+" style="cursor: pointer;">290+</div>
+                    <p style="text-decoration: underline; text-decoration-style: dotted;">Citations</p>
+                    <p class="small text-muted" style="font-size: 0.75rem;">Peer-reviewed publications</p>
+                </a>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="stats-number" id="years-counter" data-target="9.4">9.4</div>
+                <p>Years in ML/AI</p>
+                <p class="small text-muted" style="font-size: 0.75rem;">Including consultancy</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expertise Section -->
+    <div class="container section" id="expertise">
+        <div class="section-label">What I Do</div>
+        <h2>Areas of Expertise</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Agentic AI Systems</h5>
+                        <p class="card-text">Autonomous agents with LLMs, multi-agent architectures, and enterprise deployment considerations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Production ML Systems</h5>
+                        <p class="card-text">Robust ML pipelines from development to deployment, monitoring, and maintenance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Data-to-Insight Solutions</h5>
+                        <p class="card-text">Turning messy, complex data into actionable decisions—especially industrial datasets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise Enablement</h5>
+                        <p class="card-text">Technical workshops, training, and translating business requirements into delivery roadmaps.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Technical Pre-Sales</h5>
+                        <p class="card-text">Leading technical demonstrations and building custom proofs-of-concept for enterprise stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Thought Leadership</h5>
+                        <p class="card-text">Speaking at webinars and conferences on AI/ML, LLMs, and agentic AI transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology Stack Section -->
+    <div class="container section" id="tech-stack">
+        <div class="section-label">Technical Skills</div>
+        <h2>Technology Stack</h2>
+        <style>
+            .tech-category { margin-bottom: 28px; }
+            .tech-category h6 { 
+                color: var(--text-3); 
+                font-size: 0.75rem; 
+                text-transform: uppercase; 
+                letter-spacing: 0.12em; 
+                margin-bottom: 14px; 
+                font-weight: 700; 
+            }
+            .tech-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+            .tech-badge { 
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 10px 18px; 
+                border-radius: 8px; 
+                font-size: 0.9rem; 
+                font-weight: 600;
+                color: var(--text-2);
+                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+            }
+            .tech-badge::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: linear-gradient(135deg, var(--accent), var(--accent-2));
+                opacity: 0;
+                transition: opacity 0.2s ease;
+                z-index: -1;
+            }
+            .tech-badge:hover { 
+                transform: translateY(-3px) scale(1.02);
+                border-color: transparent;
+                color: #0B0B0B;
+                box-shadow: 0 8px 20px rgba(0,0,0,.3), 0 0 20px var(--glow-orange);
+            }
+            .tech-badge:hover::before {
+                opacity: 1;
+            }
+        </style>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="tech-category">
+                    <h6>AI & Machine Learning</h6>
+                    <div class="tech-badges">
+                        <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">LangGraph</span>
+                        <span class="tech-badge">Multi-Agent Systems</span>
+                        <span class="tech-badge">RAG Systems</span>
+                        <span class="tech-badge">MCP Protocol</span>
+                        <span class="tech-badge">PyTorch</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">Scikit-Learn</span>
+                        <span class="tech-badge">Conformal Prediction</span>
+                        <span class="tech-badge">Uncertainty Quantification</span>
+                        <span class="tech-badge">Bayesian Optimization</span>
+                        <span class="tech-badge">Active Learning</span>
+                        <span class="tech-badge">Federated Learning</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h6>Languages & Frameworks</h6>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tech-category">
+                    <h6>Infrastructure & LLMs</h6>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">GCP</span>
+                        <span class="tech-badge">Vertex AI</span>
+                        <span class="tech-badge">Gemini</span>
+                        <span class="tech-badge">Claude</span>
+                        <span class="tech-badge">OpenAI</span>
+                        <span class="tech-badge">Git</span>
+                        <span class="tech-badge">CI/CD</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h6>Industry Background</h6>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Materials Science</span>
+                        <span class="tech-badge">Pharmaceuticals</span>
+                        <span class="tech-badge">Chemicals</span>
+                        <span class="tech-badge">Manufacturing</span>
+                        <span class="tech-badge">Consumer Goods</span>
+                        <span class="tech-badge">Food & Beverage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- CTA Section -->
-    <div class="container section text-center">
+    <div class="container section text-center" id="contact">
         <div class="section-label">Let's Talk</div>
         <h2>Ready to Accelerate Your AI Journey?</h2>
-        <p class="lead" style="margin: 0 auto 24px;">Whether you need strategic guidance, hands-on development, or ongoing AI leadership—let's discuss how I can help.</p>
+        <p class="lead" style="margin: 0 auto 24px; max-width: 600px;">Whether you need strategic guidance, hands-on development, or ongoing AI leadership—let's discuss how I can help.</p>
         <a href="mailto:joelstrickland.ai@gmail.com?subject=Consulting%20Inquiry" class="btn btn-primary btn-lg" style="border-radius: 10px; padding: 12px 32px; font-weight: 600;">Book a Discovery Call</a>
         <a href="cv.html" class="btn btn-outline-secondary btn-lg" style="border-radius: 10px; padding: 12px 32px; margin-left: 10px;">View Full CV</a>
         <p class="text-muted" style="margin-top: 24px; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">What we'll do on the call: clarify your goal, constraints, what "success" means, and the fastest path to a deployable pilot.</p>
@@ -1701,13 +1343,13 @@
     <script>
         // Calculate years since PhD started (September 2016)
         function calculateYears() {
-            const phdStart = new Date(2016, 8, 1); // September 2016
+            const phdStart = new Date(2016, 8, 1);
             const now = new Date();
             const years = (now - phdStart) / (1000 * 60 * 60 * 24 * 365.25);
-            return Math.floor(years * 10) / 10; // One decimal place
+            return Math.floor(years * 10) / 10;
         }
 
-        // Animate counter (SEO-friendly: preserves HTML fallback values for crawlers)
+        // Animate counter
         function animateCounter(element, target, duration = 2000) {
             const suffix = element.dataset.suffix || '';
             const isDecimal = target % 1 !== 0;
@@ -1716,7 +1358,6 @@
             let hasStarted = false;
             
             function update(currentTime) {
-                // Delay start by 100ms so crawlers see HTML values, not zeros
                 if (!hasStarted) {
                     hasStarted = true;
                     startTime = currentTime;
@@ -1724,28 +1365,19 @@
                 
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function for smooth deceleration
                 const easeOut = 1 - Math.pow(1 - progress, 3);
                 const current = start + (target - start) * easeOut;
                 
-                // Only update textContent after animation has progressed (avoids flashing 0)
                 if (progress > 0.01) {
-                    if (isDecimal) {
-                        element.textContent = current.toFixed(1) + suffix;
-                    } else {
-                        element.textContent = Math.floor(current) + suffix;
-                    }
+                    element.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
                 }
                 
                 if (progress < 1) {
                     requestAnimationFrame(update);
                 } else {
-                    // Ensure final value is exact
                     element.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;
                 }
             }
-            // Small delay before starting animation (helps SEO crawlers)
             setTimeout(() => requestAnimationFrame(update), 50);
         }
 
@@ -1755,14 +1387,10 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimated) {
                     hasAnimated = true;
-                    
-                    // Animate regular counters
                     document.querySelectorAll('.stats-number[data-target]').forEach(stat => {
                         const target = parseInt(stat.dataset.target);
                         animateCounter(stat, target);
                     });
-                    
-                    // Animate years counter with calculated value
                     const yearsCounter = document.getElementById('years-counter');
                     if (yearsCounter) {
                         animateCounter(yearsCounter, calculateYears());
@@ -1771,18 +1399,16 @@
             });
         }, { threshold: 0.3 });
 
-        // Observe the stats section
         const statsSection = document.getElementById('stats-section');
         if (statsSection) {
             observer.observe(statsSection);
         }
 
-        // Update dynamic years in About section on page load
+        // Update dynamic years in About section
         document.addEventListener('DOMContentLoaded', function() {
             const aboutYears = document.getElementById('about-years');
             if (aboutYears) {
-                const years = calculateYears();
-                aboutYears.textContent = years.toFixed(1);
+                aboutYears.textContent = calculateYears().toFixed(1);
             }
         });
     </script>
