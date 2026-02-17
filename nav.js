@@ -17,8 +17,9 @@
                 <span></span>
             </button>
             <div class="nav-links">
-                <a href="${prefix}#about">About</a>
+                <a href="${prefix}#what-you-get">How I Work</a>
                 <a href="${prefix}#portfolio">Portfolio</a>
+                <a href="${prefix}#about">About</a>
                 <a href="${prefix}#expertise">Expertise</a>
                 <div class="nav-dropdown">
                     <button class="nav-dropdown-toggle">
@@ -28,7 +29,6 @@
                         </svg>
                     </button>
                     <div class="nav-dropdown-menu">
-                        <a href="${prefix}#stats-section">Track Record</a>
                         <a href="${prefix}#tech-stack">Tech Stack</a>
                         <a href="${prefix}#faq">FAQ</a>
                         <a href="${prefix}#contact">Contact</a>
