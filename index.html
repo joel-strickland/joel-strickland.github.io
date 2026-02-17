@@ -681,23 +681,18 @@
             .portfolio-item { transition: opacity 0.3s ease, transform 0.3s ease; }
             .portfolio-item.hidden { display: none !important; }
             
-            /* Case study expandable details */
-            .case-study-details { margin-top: 12px; font-size: 0.875rem; }
-            .case-study-details .detail-section { margin-bottom: 12px; }
-            .case-study-details .detail-section:last-child { margin-bottom: 0; }
-            .detail-preview { display: inline; }
-            .detail-full { display: none; }
-            .detail-full.expanded { display: inline; }
-            .expand-btn {
-                color: var(--accent-2);
-                cursor: pointer;
-                font-size: 0.85em;
-                text-decoration: none;
-                display: inline-block;
-                margin-top: 8px;
-                user-select: none;
+            /* Case study details */
+            .case-study-text { 
+                font-size: 0.9rem; 
+                line-height: 1.5;
+                color: var(--text);
             }
-            .expand-btn:hover { color: var(--accent); text-decoration: underline; }
+            .case-study-text strong { 
+                color: var(--text); 
+                font-weight: 600;
+            }
+            .case-study-section { margin-bottom: 10px; }
+            .case-study-section:last-child { margin-bottom: 0; }
         </style>
         
         <div class="row" id="portfolio-grid">
@@ -708,19 +703,14 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study — Yili</h6>
                             <h5 class="card-title">Developing Food Formulations at Yili</h5>
-                            <div class="case-study-details">
-                                <div class="detail-section">
-                                    <strong>Role:</strong> 
-                                    <span class="detail-preview">Project lead—data formatting, hierarchical time-series ML modelling...</span>
-                                    <span class="detail-full">Project lead—data formatting, hierarchical time-series ML modelling (predicting 9-month shelf life), insight extraction via XAI to identify key ingredient drivers among 9 stabilizers and 15 emulsifiers.</span>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Project lead—data formatting, hierarchical time-series ML modelling (predicting 9-month shelf life), insight extraction via XAI to identify key ingredient drivers among 9 stabilizers and 15 emulsifiers.
                                 </div>
-                                <div class="detail-section">
-                                    <strong>Impact:</strong> 
-                                    <span class="detail-preview">Enabled ingredient down-selection; predicted shelf-life from early tests...</span>
-                                    <span class="detail-full">Enabled ingredient down-selection from 24 ingredient options; predicted later-month shelf-life behavior from early tests; modeled 15,000 data points spanning 2–3 years with good R² performance.</span>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> Enabled ingredient down-selection from 24 ingredient options; predicted later-month shelf-life behavior from early tests; modeled 15,000 data points spanning 2–3 years with good R² performance.
                                 </div>
                             </div>
-                            <span class="expand-btn" onclick="event.preventDefault(); toggleDetails(this);">+ Read more</span>
                         </div>
                     </div>
                 </a>
@@ -731,19 +721,14 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study — OCAS (ArcelorMittal)</h6>
                             <h5 class="card-title">Improving Steel Performance with OCAS</h5>
-                            <div class="case-study-details">
-                                <div class="detail-section">
-                                    <strong>Role:</strong> 
-                                    <span class="detail-preview">Project lead—built multi-modal PSP models integrating chemistry, treatments...</span>
-                                    <span class="detail-full">Project lead—built multi-modal PSP models integrating chemistry, treatments (23 unique), processing variables (9), and microstructure images encoded via deep learning + PCA; led process parameter optimization using XAI.</span>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Project lead—built multi-modal PSP models integrating chemistry, treatments (23 unique), processing variables (9), and microstructure images encoded via deep learning + PCA; led process parameter optimization using XAI.
                                 </div>
-                                <div class="detail-section">
-                                    <strong>Impact:</strong> 
-                                    <span class="detail-preview">R² > 0.8 property prediction across 4 chemistries; reduced imaging data by 30%...</span>
-                                    <span class="detail-full">Achieved R² > 0.8 property prediction across 4 material chemistries; identified optimal image magnification; reduced imaging data by up to 30% without accuracy loss in some circumstances.</span>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> Achieved R² > 0.8 property prediction across 4 material chemistries; identified optimal image magnification; reduced imaging data by up to 30% without accuracy loss in some circumstances.
                                 </div>
                             </div>
-                            <span class="expand-btn" onclick="event.preventDefault(); toggleDetails(this);">+ Read more</span>
                         </div>
                     </div>
                 </a>
@@ -754,19 +739,14 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study — The AMRC</h6>
                             <h5 class="card-title">Composite Manufacturing with The AMRC</h5>
-                            <div class="case-study-details">
-                                <div class="detail-section">
-                                    <strong>Role:</strong> 
-                                    <span class="detail-preview">Project lead—built sparse deep learning model with preprocessing pipeline...</span>
-                                    <span class="detail-full">Project lead—built sparse deep learning model with preprocessing pipeline (grouping + aggregation) to predict tooling failure mechanisms across 55 drill/composite pairs with 23 machining responses; used XAI to streamline experiments.</span>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Project lead—built sparse deep learning model with preprocessing pipeline (grouping + aggregation) to predict tooling failure mechanisms across 55 drill/composite pairs with 23 machining responses; used XAI to streamline experiments.
                                 </div>
-                                <div class="detail-section">
-                                    <strong>Impact:</strong> 
-                                    <span class="detail-preview">R² = 0.73 with 82% missing data; 80% fewer experiments (200 vs 1,000 holes)...</span>
-                                    <span class="detail-full">Achieved R² = 0.73 despite 82% missing targets; enabled 80% fewer experiments (200 vs typical 1,000 holes) → 80%+ reduction in direct testing costs; predicted tool life from start-of-life performance.</span>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> Achieved R² = 0.73 despite 82% missing targets; enabled 80% fewer experiments (200 vs typical 1,000 holes) → 80%+ reduction in direct testing costs; predicted tool life from start-of-life performance.
                                 </div>
                             </div>
-                            <span class="expand-btn" onclick="event.preventDefault(); toggleDetails(this);">+ Read more</span>
                         </div>
                     </div>
                 </a>
@@ -777,19 +757,14 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study — FUCHS</h6>
                             <h5 class="card-title">Lubricant Formulation Development at FUCHS</h5>
-                            <div class="case-study-details">
-                                <div class="detail-section">
-                                    <strong>Role:</strong> 
-                                    <span class="detail-preview">Secured pilot, trained key champion in ML/adaptive DOE workflows...</span>
-                                    <span class="detail-full">Secured pilot engagement, trained their key champion in ML/adaptive DOE workflows, provided ongoing technical support throughout—champion executed work on their side using 24 historic formulations across 3 DOE cycles generating 30 candidates.</span>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Secured pilot engagement, trained their key champion in ML/adaptive DOE workflows, provided ongoing technical support throughout—champion executed work on their side using 24 historic formulations across 3 DOE cycles generating 30 candidates.
                                 </div>
-                                <div class="detail-section">
-                                    <strong>Impact:</strong> 
-                                    <span class="detail-preview">50% performance improvement; 7 of 30 candidates tested → 2 met target...</span>
-                                    <span class="detail-full">Achieved 50% performance improvement target; chemist selected 7 of 30 ML-generated candidates to test → 2 met target and were shared with customer; delivered goals in significantly reduced timescales vs traditional approaches.</span>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> Achieved 50% performance improvement target; chemist selected 7 of 30 ML-generated candidates to test → 2 met target and were shared with customer; delivered goals in significantly reduced timescales vs traditional approaches.
                                 </div>
                             </div>
-                            <span class="expand-btn" onclick="event.preventDefault(); toggleDetails(this);">+ Read more</span>
                         </div>
                     </div>
                 </a>
@@ -800,19 +775,14 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study — voestalpine</h6>
                             <h5 class="card-title">Advanced Materials & Processes at voestalpine</h5>
-                            <div class="case-study-details">
-                                <div class="detail-section">
-                                    <strong>Role:</strong> 
-                                    <span class="detail-preview">Project lead across 4 use cases—AM alloy design, process optimization...</span>
-                                    <span class="detail-full">Project lead across 4 use cases—new AM alloy design (identified critical chromium concentration + martensitic phase importance), process parameter optimization, QA KPI generation from sensor/monitoring data, and operational model deployment enabling customer-service teams.</span>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Project lead across 4 use cases—new AM alloy design (identified critical chromium concentration + martensitic phase importance), process parameter optimization, QA KPI generation from sensor/monitoring data, and operational model deployment enabling customer-service teams.
                                 </div>
-                                <div class="detail-section">
-                                    <strong>Impact:</strong> 
-                                    <span class="detail-preview">Almost 40% cost savings over 3 years; reduced iterations from multiple tests...</span>
-                                    <span class="detail-full">Achieved almost 40% cost savings over 3 years in process-parameter optimization/testing/manufacturing; reduced iterations from multiple tests to one round of testing; equipped broader teams with validated models.</span>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> Achieved almost 40% cost savings over 3 years in process-parameter optimization/testing/manufacturing; reduced iterations from multiple tests to one round of testing; equipped broader teams with validated models.
                                 </div>
                             </div>
-                            <span class="expand-btn" onclick="event.preventDefault(); toggleDetails(this);">+ Read more</span>
                         </div>
                     </div>
                 </a>
@@ -823,19 +793,14 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study — Equivital | Journal, 2025</h6>
                             <h5 class="card-title">Conformal Deep Learning for Core Body Temperature</h5>
-                            <div class="case-study-details">
-                                <div class="detail-section">
-                                    <strong>Role:</strong> 
-                                    <span class="detail-preview">Conceived study, designed/implemented conformal deep learning framework...</span>
-                                    <span class="detail-full">Conceived study, designed/implemented conformal deep learning framework, developed SCOPE algorithm, performed all ML experiments/analyses, wrote manuscript.</span>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Conceived study, designed/implemented conformal deep learning framework, developed SCOPE algorithm, performed all ML experiments/analyses, wrote manuscript.
                                 </div>
-                                <div class="detail-section">
-                                    <strong>Impact:</strong> 
-                                    <span class="detail-preview">Published in Communications Engineering (Nature). Novel uncertainty-aware approach...</span>
-                                    <span class="detail-full">Published in Communications Engineering (Nature). Novel uncertainty-aware approach for real-time physiological monitoring in high-risk heat-stress environments.</span>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> Published in Communications Engineering (Nature). Novel uncertainty-aware approach for real-time physiological monitoring in high-risk heat-stress environments.
                                 </div>
                             </div>
-                            <span class="expand-btn" onclick="event.preventDefault(); toggleDetails(this);">+ Read more</span>
                         </div>
                     </div>
                 </a>
@@ -846,19 +811,14 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Case Study — BAT, Zizo, B-Secur | Journal, 2024</h6>
                             <h5 class="card-title">Nicotine Pharmacokinetic Modelling for E-Cigarettes</h5>
-                            <div class="case-study-details">
-                                <div class="detail-section">
-                                    <strong>Role:</strong> 
-                                    <span class="detail-preview">Led all machine learning modelling end-to-end...</span>
-                                    <span class="detail-full">Led all machine learning modelling end-to-end—data preparation, model development, validation, analysis, and results translation.</span>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Led all machine learning modelling end-to-end—data preparation, model development, validation, analysis, and results translation.
                                 </div>
-                                <div class="detail-section">
-                                    <strong>Impact:</strong> 
-                                    <span class="detail-preview">Published in BioData Mining. Validated ML approach across 3 industry partners...</span>
-                                    <span class="detail-full">Published in BioData Mining. Validated ML approach for pharmacokinetic predictions across multiple industry partners (BAT, Zizo, B-Secur).</span>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> Published in BioData Mining. Validated ML approach for pharmacokinetic predictions across multiple industry partners (BAT, Zizo, B-Secur).
                                 </div>
                             </div>
-                            <span class="expand-btn" onclick="event.preventDefault(); toggleDetails(this);">+ Read more</span>
                         </div>
                     </div>
                 </a>
@@ -1172,25 +1132,6 @@
     </div>
     
     <script>
-    // Case study expand/collapse functionality
-    function toggleDetails(btn) {
-        const cardBody = btn.closest('.card-body');
-        const previews = cardBody.querySelectorAll('.detail-preview');
-        const fulls = cardBody.querySelectorAll('.detail-full');
-        
-        const isExpanded = fulls[0].classList.contains('expanded');
-        
-        if (isExpanded) {
-            previews.forEach(p => p.style.display = 'inline');
-            fulls.forEach(f => f.classList.remove('expanded'));
-            btn.textContent = '+ Read more';
-        } else {
-            previews.forEach(p => p.style.display = 'none');
-            fulls.forEach(f => f.classList.add('expanded'));
-            btn.textContent = '− Read less';
-        }
-    }
-    
     // Portfolio filter functionality
     document.addEventListener('DOMContentLoaded', function() {
         const filterBtns = document.querySelectorAll('.filter-btn');
