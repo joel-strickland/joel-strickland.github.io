@@ -261,20 +261,13 @@
       a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #666 !important; }
     }
     
-    /* CV page footer alignment - match .cv-content width and padding */
-    body > footer.text-center {
-      max-width: 900px !important;
-      width: 100%;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      padding: 40px 20px;
-      box-sizing: border-box;
+    /* CV page footer alignment - inside .cv-content */
+    .cv-content footer.text-center {
+      padding: 40px 0;
     }
-    body > footer.text-center > .container {
+    .cv-content footer.text-center .container {
       max-width: 100% !important;
-      width: 100% !important;
       padding: 0 !important;
-      margin: 0 !important;
     }
   </style>
 </head>
@@ -454,10 +447,11 @@ Materialia, Scientific Reports, Materials Characterization</li>
   <p style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Questions or want to connect?</strong></p>
   <p style="margin-bottom: 16px;"><a href="mailto:joelstrickland.ai@gmail.com" class="btn-primary-cv">Get in Touch</a></p>
 </div>
-</div><!-- /.cv-content -->
 
 <!-- Footer (injected by nav.js) -->
 <div id="footer-placeholder"></div>
+
+</div><!-- /.cv-content -->
 
 <script src="nav.js"></script>
 <script>
