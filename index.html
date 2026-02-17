@@ -540,21 +540,11 @@
         <style>
             .process-timeline {
                 display: flex;
-                justify-content: space-between;
-                position: relative;
+                justify-content: center;
+                align-items: flex-start;
                 padding: 20px 0;
                 margin-bottom: 32px;
-            }
-            .process-timeline::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 0;
-                right: 0;
-                height: 2px;
-                background: linear-gradient(90deg, var(--accent), var(--accent-2));
-                transform: translateY(-50%);
-                z-index: 0;
+                gap: 0;
             }
             .process-step {
                 display: flex;
@@ -562,7 +552,15 @@
                 align-items: center;
                 position: relative;
                 z-index: 1;
-                flex: 1;
+            }
+            .process-arrow {
+                display: flex;
+                align-items: center;
+                padding-top: 12px;
+                color: var(--accent);
+                font-size: 1.5rem;
+                padding: 0 16px;
+                margin-top: 10px;
             }
             .process-dot {
                 width: 48px;
@@ -596,11 +594,8 @@
                 text-align: center;
             }
             @media (max-width: 576px) {
-                .process-timeline { flex-direction: column; gap: 24px; }
-                .process-timeline::before { 
-                    top: 0; bottom: 0; left: 50%; right: auto;
-                    width: 2px; height: 100%; transform: translateX(-50%);
-                }
+                .process-timeline { flex-direction: column; align-items: center; gap: 8px; }
+                .process-arrow { transform: rotate(90deg); padding: 8px 0; margin-top: 0; }
                 .process-dot { width: 40px; height: 40px; font-size: 1rem; }
             }
         </style>
@@ -611,16 +606,19 @@
                 <div class="process-label">Frame</div>
                 <div class="process-sublabel">the decision</div>
             </div>
+            <div class="process-arrow">→</div>
             <div class="process-step">
                 <div class="process-dot">2</div>
                 <div class="process-label">Build</div>
                 <div class="process-sublabel">proof of value</div>
             </div>
+            <div class="process-arrow">→</div>
             <div class="process-step">
                 <div class="process-dot">3</div>
                 <div class="process-label">Evaluate</div>
                 <div class="process-sublabel">reliability & risk</div>
             </div>
+            <div class="process-arrow">→</div>
             <div class="process-step">
                 <div class="process-dot">4</div>
                 <div class="process-label">Deliver</div>
