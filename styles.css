@@ -423,6 +423,19 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    
+    /* Add padding to body to account for fixed nav */
+    body {
+        padding-top: 60px;
+    }
+    
     .nav-toggle {
         display: flex;
     }
