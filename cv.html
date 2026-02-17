@@ -262,15 +262,19 @@
     }
     
     /* CV page footer alignment - match .cv-content width and padding */
-    footer.text-center {
-      max-width: 900px;
-      margin: 0 auto;
+    body > footer.text-center {
+      max-width: 900px !important;
+      width: 100%;
+      margin-left: auto !important;
+      margin-right: auto !important;
       padding: 40px 20px;
+      box-sizing: border-box;
     }
-    footer.text-center .container {
-      max-width: 100%;
-      padding: 0;
-      margin: 0;
+    body > footer.text-center > .container {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
     }
   </style>
 </head>
