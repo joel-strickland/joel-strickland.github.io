@@ -43,6 +43,7 @@ html {
     scrollbar-gutter: stable;
     background: var(--bg);
     scroll-padding-top: 60px;
+    overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -64,6 +65,7 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
 }
 
 /* Subtle grid pattern overlay */
