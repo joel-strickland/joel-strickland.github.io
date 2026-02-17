@@ -682,7 +682,7 @@
             .portfolio-item.hidden { display: none !important; }
             
             /* Case study expandable details */
-            .case-study-details { margin-top: 12px; }
+            .case-study-details { margin-top: 12px; font-size: 0.875rem; }
             .case-study-details .detail-section { margin-bottom: 12px; }
             .case-study-details .detail-section:last-child { margin-bottom: 0; }
             .detail-preview { display: inline; }
@@ -694,7 +694,7 @@
                 font-size: 0.85em;
                 text-decoration: none;
                 display: inline-block;
-                margin-left: 4px;
+                margin-top: 8px;
                 user-select: none;
             }
             .expand-btn:hover { color: var(--accent); text-decoration: underline; }
@@ -1171,6 +1171,25 @@
     </div>
     
     <script>
+    // Case study expand/collapse functionality
+    function toggleDetails(btn) {
+        const cardBody = btn.closest('.card-body');
+        const previews = cardBody.querySelectorAll('.detail-preview');
+        const fulls = cardBody.querySelectorAll('.detail-full');
+        
+        const isExpanded = fulls[0].classList.contains('expanded');
+        
+        if (isExpanded) {
+            previews.forEach(p => p.style.display = 'inline');
+            fulls.forEach(f => f.classList.remove('expanded'));
+            btn.textContent = '+ Read more';
+        } else {
+            previews.forEach(p => p.style.display = 'none');
+            fulls.forEach(f => f.classList.add('expanded'));
+            btn.textContent = '− Read less';
+        }
+    }
+    
     // Portfolio filter functionality
     document.addEventListener('DOMContentLoaded', function() {
         const filterBtns = document.querySelectorAll('.filter-btn');
