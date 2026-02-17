@@ -536,35 +536,95 @@
         <div class="section-label">How I Work</div>
         <h2>Core Strengths</h2>
         
-        <!-- Process Steps as Tiles -->
-        <div class="row mb-4">
-            <div class="col-6 col-md-3 mb-3">
-                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; height: 100%;">
-                    <div style="color: var(--accent); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">1</div>
-                    <div style="font-weight: 600; color: var(--text); font-size: 0.9rem;">Frame</div>
-                    <div style="color: var(--text-3); font-size: 0.8rem;">the decision</div>
-                </div>
+        <!-- Timeline Process -->
+        <style>
+            .process-timeline {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                padding: 20px 0;
+                margin-bottom: 32px;
+            }
+            .process-timeline::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: linear-gradient(90deg, var(--accent), var(--accent-2));
+                transform: translateY(-50%);
+                z-index: 0;
+            }
+            .process-step {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+                flex: 1;
+            }
+            .process-dot {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: var(--bg);
+                border: 3px solid var(--accent);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                color: var(--accent);
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+                transition: all 0.2s ease;
+            }
+            .process-step:hover .process-dot {
+                background: linear-gradient(135deg, var(--accent), var(--accent-2));
+                color: var(--bg);
+                transform: scale(1.1);
+            }
+            .process-label {
+                font-weight: 600;
+                color: var(--text);
+                font-size: 0.95rem;
+                text-align: center;
+            }
+            .process-sublabel {
+                color: var(--text-3);
+                font-size: 0.8rem;
+                text-align: center;
+            }
+            @media (max-width: 576px) {
+                .process-timeline { flex-direction: column; gap: 24px; }
+                .process-timeline::before { 
+                    top: 0; bottom: 0; left: 50%; right: auto;
+                    width: 2px; height: 100%; transform: translateX(-50%);
+                }
+                .process-dot { width: 40px; height: 40px; font-size: 1rem; }
+            }
+        </style>
+        
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="process-dot">1</div>
+                <div class="process-label">Frame</div>
+                <div class="process-sublabel">the decision</div>
             </div>
-            <div class="col-6 col-md-3 mb-3">
-                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; height: 100%;">
-                    <div style="color: var(--accent); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">2</div>
-                    <div style="font-weight: 600; color: var(--text); font-size: 0.9rem;">Build</div>
-                    <div style="color: var(--text-3); font-size: 0.8rem;">proof of value</div>
-                </div>
+            <div class="process-step">
+                <div class="process-dot">2</div>
+                <div class="process-label">Build</div>
+                <div class="process-sublabel">proof of value</div>
             </div>
-            <div class="col-6 col-md-3 mb-3">
-                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; height: 100%;">
-                    <div style="color: var(--accent); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">3</div>
-                    <div style="font-weight: 600; color: var(--text); font-size: 0.9rem;">Evaluate</div>
-                    <div style="color: var(--text-3); font-size: 0.8rem;">reliability & risk</div>
-                </div>
+            <div class="process-step">
+                <div class="process-dot">3</div>
+                <div class="process-label">Evaluate</div>
+                <div class="process-sublabel">reliability & risk</div>
             </div>
-            <div class="col-6 col-md-3 mb-3">
-                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; height: 100%;">
-                    <div style="color: var(--accent); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">4</div>
-                    <div style="font-weight: 600; color: var(--text); font-size: 0.9rem;">Deliver</div>
-                    <div style="color: var(--text-3); font-size: 0.8rem;">& hand over</div>
-                </div>
+            <div class="process-step">
+                <div class="process-dot">4</div>
+                <div class="process-label">Deliver</div>
+                <div class="process-sublabel">& hand over</div>
             </div>
         </div>
         
