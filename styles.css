@@ -136,12 +136,20 @@ a:hover {
 .main-nav {
     background: rgba(11, 11, 11, 0.85);
     padding: 14px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1000;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
+}
+
+/* Add padding to body to account for fixed nav */
+body {
+    padding-top: 60px;
 }
 
 .main-nav .container {
@@ -423,19 +431,6 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-    .main-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
-    
-    /* Add padding to body to account for fixed nav */
-    body {
-        padding-top: 60px;
-    }
-    
     .nav-toggle {
         display: flex;
     }
