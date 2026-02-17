@@ -535,6 +535,7 @@
     <div class="container section" id="what-you-get">
         <div class="section-label">How I Work</div>
         <h2>Core Strengths</h2>
+        <p style="margin-bottom: 16px; color: var(--text-2); font-size: 0.95rem;"><strong>Frame the decision → build the smallest proof of value → evaluate reliability & risk → productionise and hand over.</strong></p>
         <div class="highlight">
             <p class="lead" style="margin-bottom: 24px;">I translate messy objectives into measurable targets, build the simplest thing that proves value, and make it reliable in the real world:</p>
             <ul style="list-style: none; padding-left: 0;">
@@ -552,7 +553,7 @@
                 </li>
                 <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
                     <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">→</span>
-                    <strong>End-to-end delivery</strong> — from data pipelines to deployable services (Python, APIs, cloud), built to be used
+                    <strong>End-to-end delivery</strong> — solution architecture from data pipelines to deployable services (Python, APIs, cloud), built to be used
                 </li>
                 <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
                     <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">→</span>
@@ -566,7 +567,36 @@
     <div class="container section" id="portfolio">
         <div class="section-label">Work & Writing</div>
         <h2>Portfolio</h2>
-        <p class="text-muted mb-4">In these projects I typically led: problem framing, modeling/uncertainty, and technical demos/presales—often building the algorithm + backend. Published case studies, articles, talks, and research.</p>
+        <p class="text-muted mb-4">In these projects I typically led: problem framing, modelling, and uncertainty quantification—often building the algorithm + backend and taking prototypes to production pilots. Published case studies, articles, talks, and research.</p>
+        
+        <!-- Featured Projects -->
+        <div class="row mb-4">
+            <div class="col-12 mb-2"><h6 style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em;">Featured</h6></div>
+            <div class="col-md-4 mb-3">
+                <a href="https://intellegens.com/composite-manufacturing-with-the-amrc/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div style="padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; height: 100%;">
+                        <p style="margin: 0 0 8px; font-weight: 600; color: var(--text);">Composite Manufacturing (AMRC)</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--accent);">~80% fewer experiments to predict failure</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div style="padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; height: 100%;">
+                        <p style="margin: 0 0 8px; font-weight: 600; color: var(--text);">Food Formulation (Yili)</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--accent);">Eliminated unnecessary ingredients via imputation</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a href="https://intellegens.com/understanding-and-improving-steel-performance-with-ocas/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div style="padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; height: 100%;">
+                        <p style="margin: 0 0 8px; font-weight: 600; color: var(--text);">Steel Performance (OCAS)</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--accent);">Structure-property insights from sparse data</p>
+                    </div>
+                </a>
+            </div>
+        </div>
         
         <!-- Filter buttons -->
         <div class="portfolio-filters mb-4">
@@ -1011,8 +1041,8 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Agentic AI Systems</h5>
-                        <p class="card-text">Autonomous agents with LLMs, multi-agent architectures, and enterprise deployment. Built <strong>Alchemite Insight</strong> (AI for science agent) and <strong>NOA</strong> (full-stack internal prototype) at Intellegens.</p>
+                        <h5 class="card-title">Data-to-Insight Solutions</h5>
+                        <p class="card-text">Turning messy, complex data into actionable decisions—especially industrial datasets with sparse/noisy data.</p>
                     </div>
                 </div>
             </div>
@@ -1020,20 +1050,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">ML Systems &amp; Backends</h5>
-                        <p class="card-text">Building ML pipelines and backend services (APIs, data flows); deployment/ops typically handled with internal teams.</p>
+                        <p class="card-text">Building ML pipelines and backend services (APIs, data flows); end-to-end solution architecture from data to deployed service.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Data-to-Insight Solutions</h5>
-                        <p class="card-text">Turning messy, complex data into actionable decisions—especially industrial datasets.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -1042,11 +1062,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row mt-3">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Technical Pre-Sales</h5>
-                        <p class="card-text">Leading technical demonstrations and building custom proofs-of-concept for enterprise stakeholders.</p>
+                        <h5 class="card-title">Agentic AI &amp; LLM Systems</h5>
+                        <p class="card-text">Autonomous agents, multi-agent architectures, and RAG systems—when LLMs are the right tool for the problem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Technical Demos &amp; Prototyping</h5>
+                        <p class="card-text">Building custom proofs-of-concept and demonstrations for enterprise stakeholders.</p>
                     </div>
                 </div>
             </div>
@@ -1054,7 +1084,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Thought Leadership</h5>
-                        <p class="card-text">Speaking at webinars and conferences on AI/ML, LLMs, and agentic AI transformation.</p>
+                        <p class="card-text">Speaking at webinars and conferences on AI/ML applications and industrial transformation.</p>
                     </div>
                 </div>
             </div>
