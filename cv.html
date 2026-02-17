@@ -261,17 +261,16 @@
       a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #666 !important; }
     }
     
-    /* CV page footer alignment */
+    /* CV page footer alignment - match .cv-content width and padding */
     footer.text-center {
       max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
     }
     footer.text-center .container {
-      max-width: 900px;
+      max-width: 100%;
       padding: 0;
-      margin: 0 auto;
-      text-align: center;
+      margin: 0;
     }
   </style>
 </head>
