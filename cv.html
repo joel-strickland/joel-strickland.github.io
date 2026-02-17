@@ -185,6 +185,26 @@
       box-shadow: 0 8px 30px var(--glow-orange), 0 0 60px var(--glow-blue);
     }
     
+    /* Mobile styles for CV */
+    @media (max-width: 900px) {
+      .quick-nav {
+        top: 60px;
+        padding: 10px 16px;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .quick-nav a {
+        margin-left: 8px;
+        font-size: 0.85rem;
+      }
+      .cv-content {
+        padding-top: 120px;
+      }
+      .cv-content [id] {
+        scroll-margin-top: 180px;
+      }
+    }
+    
     /* Print styles - Dark text on white for printing */
     @media print {
       .nav-bar, nav, .cta-footer { display: none !important; }
