@@ -1167,11 +1167,8 @@
         
         <div class="text-center mt-4 show-more-container">
             <button class="show-more-btn" onclick="toggleShowMore()">Show More</button>
-            <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" class="scholar-btn">
-                <svg width="16" height="16" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
-                    <path d="M8 2L3 6h3v6h4V6h3L8 2z"/>
-                </svg>
-                Google Scholar
+            <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" class="show-more-btn" style="text-decoration: none; display: inline-block;">
+                All Publications
             </a>
         </div>
     </div>
@@ -1179,39 +1176,42 @@
     <script>
     // Portfolio filter and show more functionality
     let showingAll = false;
+    let currentTypeFilter = 'casestudy';
+    
+    function applyFilters() {
+        const items = document.querySelectorAll('.portfolio-item');
+        items.forEach(item => {
+            const itemTypes = (item.dataset.type || '').split(' ');
+            const itemIndex = parseInt(item.dataset.index || '0');
+            let typeMatch = currentTypeFilter === 'all' || itemTypes.some(t => t === currentTypeFilter);
+            
+            if (typeMatch) {
+                item.classList.remove('hidden');
+                // Apply collapsed state based on index
+                if (!showingAll && itemIndex > 2) {
+                    item.classList.add('collapsed');
+                } else {
+                    item.classList.remove('collapsed');
+                }
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+    }
     
     function toggleShowMore() {
         showingAll = !showingAll;
-        const btn = document.querySelector('.show-more-btn');
-        btn.textContent = showingAll ? 'Show Less' : 'Show More';
+        const btns = document.querySelectorAll('.show-more-btn');
+        btns.forEach(btn => {
+            if (btn.tagName === 'BUTTON') {
+                btn.textContent = showingAll ? 'Show Less' : 'Show More';
+            }
+        });
         applyFilters();
     }
     
     document.addEventListener('DOMContentLoaded', function() {
         const filterBtns = document.querySelectorAll('.filter-btn');
-        const items = document.querySelectorAll('.portfolio-item');
-        
-        let currentTypeFilter = 'casestudy';
-        
-        function applyFilters() {
-            items.forEach(item => {
-                const itemTypes = (item.dataset.type || '').split(' ');
-                const itemIndex = parseInt(item.dataset.index || '0');
-                let typeMatch = currentTypeFilter === 'all' || itemTypes.some(t => t === currentTypeFilter);
-                
-                if (typeMatch) {
-                    item.classList.remove('hidden');
-                    // Apply collapsed state based on index
-                    if (!showingAll && itemIndex > 2) {
-                        item.classList.add('collapsed');
-                    } else {
-                        item.classList.remove('collapsed');
-                    }
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
-        }
         
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
