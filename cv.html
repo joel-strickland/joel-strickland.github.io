@@ -62,9 +62,77 @@
       border-image: linear-gradient(90deg, var(--accent), var(--secondary)) 1;
     }
     
+    /* Expandable skill sections */
+    .skill-category {
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--secondary);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+    
+    .skill-category:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .skill-header {
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg);
+      user-select: none;
+      transition: background-color 0.2s ease;
+    }
+    
+    .skill-header:hover {
+      background: var(--secondary);
+    }
+    
+    .skill-header strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+    
+    .skill-toggle {
+      font-size: 1.2rem;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+    
+    .skill-toggle.expanded {
+      transform: rotate(180deg);
+    }
+    
+    .skill-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 1rem;
+      background: var(--bg-card);
+    }
+    
+    .skill-content.expanded {
+      max-height: 500px;
+      padding: 0.75rem 1rem;
+    }
+    
+    .skill-content p {
+      margin: 0;
+      line-height: 1.6;
+    }
+    
     /* Print styles for CV */
     @media print {
       .nav-bar, nav, .cta-footer { display: none !important; }
+      .skill-toggle { display: none !important; }
+      .skill-content { 
+        max-height: none !important; 
+        padding: 0.5rem 1rem !important; 
+      }
+      .skill-category { border: 1px solid #ccc !important; }
       body { 
         max-width: 100%; 
         padding: 0; 
@@ -132,18 +200,57 @@
 <p>Bridge technical depth (PhD, 20+ peer-reviewed publications, chartered engineer) with commercial acumen and hands-on implementation.</p>
 <hr />
 <h2 id="core-expertise">Core Expertise</h2>
-<p><strong>Problem-solving & ML:</strong> Algorithm Development • Conformal Prediction • Uncertainty Quantification • Bayesian Optimization • Active Learning • Deep Learning • Federated Learning • Adaptive Experimental Design</p>
-<p><strong>LLM Tooling (as needed):</strong> LangChain/LangGraph • RAG Systems • Multi-Agent Architectures • MCP Protocol</p>
-<p><strong>Technical Stack:</strong> Python (NumPy, Pandas,
-SciKit-Learn, PyTorch, TensorFlow) • Docker • MCP (Model Context
-Protocol) • REST APIs • FastAPI • Backend Development • Full-Stack
-Product Building • SQL • GCP/Vertex AI • Git • CI/CD</p>
-<p><strong>Domain Expertise:</strong> Materials Science •
-Pharmaceuticals • Chemicals • Manufacturing • Formulation Development •
-Process Safety • Experimental Design (DoE) • Quantitative Finance</p>
-<p><strong>Business Impact:</strong> Technical Pre-Sales • Enterprise
-Delivery • Stakeholder Management • C-Suite Communication • Thought
-Leadership • Training &amp; Workshops</p>
+
+<div class="skill-category">
+  <div class="skill-header" onclick="toggleSkill(this)">
+    <strong>Problem-solving & ML</strong>
+    <span class="skill-toggle">▼</span>
+  </div>
+  <div class="skill-content">
+    <p>Algorithm Development • Conformal Prediction • Uncertainty Quantification • Bayesian Optimization • Active Learning • Deep Learning • Federated Learning • Adaptive Experimental Design</p>
+  </div>
+</div>
+
+<div class="skill-category">
+  <div class="skill-header" onclick="toggleSkill(this)">
+    <strong>LLM Tooling (as needed)</strong>
+    <span class="skill-toggle">▼</span>
+  </div>
+  <div class="skill-content">
+    <p>LangChain/LangGraph • RAG Systems • Multi-Agent Architectures • MCP Protocol</p>
+  </div>
+</div>
+
+<div class="skill-category">
+  <div class="skill-header" onclick="toggleSkill(this)">
+    <strong>Technical Stack</strong>
+    <span class="skill-toggle">▼</span>
+  </div>
+  <div class="skill-content">
+    <p>Python (NumPy, Pandas, SciKit-Learn, PyTorch, TensorFlow) • Docker • MCP (Model Context Protocol) • REST APIs • FastAPI • Backend Development • Full-Stack Product Building • SQL • GCP/Vertex AI • Git • CI/CD</p>
+  </div>
+</div>
+
+<div class="skill-category">
+  <div class="skill-header" onclick="toggleSkill(this)">
+    <strong>Domain Expertise</strong>
+    <span class="skill-toggle">▼</span>
+  </div>
+  <div class="skill-content">
+    <p>Materials Science • Pharmaceuticals • Chemicals • Manufacturing • Formulation Development • Process Safety • Experimental Design (DoE) • Quantitative Finance</p>
+  </div>
+</div>
+
+<div class="skill-category">
+  <div class="skill-header" onclick="toggleSkill(this)">
+    <strong>Business Impact</strong>
+    <span class="skill-toggle">▼</span>
+  </div>
+  <div class="skill-content">
+    <p>Technical Pre-Sales • Enterprise Delivery • Stakeholder Management • C-Suite Communication • Thought Leadership • Training &amp; Workshops</p>
+  </div>
+</div>
+
 <hr />
 <h2 id="professional-experience">Professional Experience</h2>
 <h3 id="head-of-agentic-ai"><strong>Head of Agentic AI & Technical Pre-Sales</strong></h3>
@@ -269,6 +376,15 @@ Materialia, Scientific Reports, Materials Characterization</li>
             cvYears.textContent = calculateYears().toFixed(1);
         }
     });
+    
+    // Toggle expandable skill sections
+    function toggleSkill(header) {
+        const content = header.nextElementSibling;
+        const toggle = header.querySelector('.skill-toggle');
+        
+        content.classList.toggle('expanded');
+        toggle.classList.toggle('expanded');
+    }
 </script>
 </body>
 </html>
