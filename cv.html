@@ -37,12 +37,12 @@
   
   <!-- Bootstrap loaded BEFORE custom styles so dark theme overrides -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   
   <style>
     /* CV page-specific styles */
     
-    /* Default styles provided by pandoc */
+    /* Pandoc default styles */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -57,166 +57,12 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     
-    /* CV content container */
-    .cv-content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 80px 20px 40px;
-    }
-    
-    /* Quick nav styling */
-    .quick-nav {
-      background: rgba(247, 249, 251, 0.95);
-      padding: 12px 24px;
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      border: 1px solid var(--border);
-      position: fixed;
-      top: 70px;
-      left: 16px;
-      right: 16px;
-      width: auto;
-      z-index: 999;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      box-sizing: border-box;
-      box-shadow: 0 2px 8px rgba(11,31,58,.08);
-    }
-    @media (min-width: 700px) {
-      .quick-nav {
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        width: auto;
-        max-width: calc(100% - 32px);
-      }
-    }
-    .quick-nav strong {
-      color: var(--text-3);
-    }
-    .quick-nav a {
-      color: var(--accent);
-      text-decoration: none;
-      margin-left: 16px;
-      transition: color 0.18s ease;
-    }
-    .quick-nav a:hover {
-      color: var(--accent-hover);
-    }
-    
-    /* Override scroll offset to account for both fixed navs */
-    .cv-content [id] {
-      scroll-margin-top: 140px;
-    }
-    
-    h1, h2, h3 { letter-spacing: -0.03em; }
+    /* CV-specific heading styles (others in styles.css) */
     h1 {
-      color: var(--text);
-      border-bottom: 3px solid;
       border-image: linear-gradient(90deg, var(--accent), var(--secondary)) 1;
-      padding-bottom: 16px;
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-    h2 {
-      color: var(--text);
-      margin-top: 56px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 12px;
-      font-size: 1.5rem;
-      font-weight: 700;
-      position: relative;
-    }
-    h2::before {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      width: 60px;
-      height: 2px;
-      background: var(--accent);
-    }
-    h3 {
-      color: var(--text);
-      margin-top: 32px;
-      font-size: 1.2rem;
-      font-weight: 700;
     }
     
-    hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 32px 0;
-    }
-    
-    /* Footer CTA styling */
-    .cta-footer {
-      background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
-      border-radius: var(--radius);
-      padding: 40px;
-      text-align: center;
-      border: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-footer::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--accent);
-    }
-    .cta-footer p {
-      max-width: none;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--text);
-    }
-    .cta-footer a.btn-primary-cv {
-      background: var(--accent);
-      background-size: 200% 200%;
-      color: white;
-      padding: 14px 36px;
-      text-decoration: none;
-      border-radius: var(--radius-sm);
-      display: inline-block;
-      font-weight: 700;
-      font-size: 1rem;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 15px var(--glow-teal);
-    }
-    .cta-footer a.btn-primary-cv:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 8px 25px var(--glow-teal);
-      background: var(--accent-hover);
-    }
-    
-    /* Mobile styles for CV */
-    @media (max-width: 900px) {
-      .quick-nav {
-        top: 60px;
-        padding: 10px 16px;
-        gap: 6px;
-        flex-wrap: wrap;
-      }
-      .quick-nav a {
-        margin-left: 8px;
-        font-size: 0.85rem;
-      }
-      .cv-content {
-        padding-top: 120px;
-      }
-      .cv-content [id] {
-        scroll-margin-top: 180px;
-      }
-    }
-    
-    /* Print styles - Dark text on white for printing */
+    /* Print styles for CV */
     @media print {
       .nav-bar, nav, .cta-footer { display: none !important; }
       body { 

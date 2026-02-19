@@ -131,6 +131,12 @@ a:hover {
     z-index: 1; 
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 28px;
+    }
+}
+
 /* Scroll offset for sticky nav */
 [id] {
     scroll-margin-top: 60px;
@@ -966,6 +972,48 @@ footer a:hover {
     max-width: 900px;
     margin: 0 auto;
     padding: 80px 20px 40px;
+}
+.cv-content h1, 
+.cv-content h2, 
+.cv-content h3 { 
+    letter-spacing: -0.03em; 
+}
+.cv-content h1 {
+    color: var(--text);
+    border-bottom: 3px solid;
+    padding-bottom: 16px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+.cv-content h2 {
+    color: var(--text);
+    margin-top: 56px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+}
+.cv-content h2::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+}
+.cv-content h3 {
+    color: var(--text);
+    margin-top: 32px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.cv-content hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 32px 0;
 }
 
 .quick-nav {
