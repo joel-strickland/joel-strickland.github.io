@@ -17,10 +17,10 @@
                 <span></span>
             </button>
             <div class="nav-links">
-                <a href="${prefix}#what-you-get">How I Work</a>
-                <a href="${prefix}#portfolio">Portfolio</a>
                 <a href="${prefix}#about">About</a>
                 <a href="${prefix}#expertise">Expertise</a>
+                <a href="${prefix}#portfolio">Portfolio</a>
+                <a href="${prefix}#what-you-get">How I Work</a>
                 <div class="nav-dropdown">
                     <button class="nav-dropdown-toggle">
                         More
