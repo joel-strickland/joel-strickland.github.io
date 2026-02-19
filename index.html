@@ -462,26 +462,27 @@
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .btn-outline-primary:hover {
-            background: var(--accent-2);
-            border-color: var(--accent-2);
-            color: var(--bg);
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(47,164,255,.3);
+            box-shadow: 0 8px 20px var(--glow-teal);
         }
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            background: var(--accent);
             border: none;
-            color: var(--bg);
+            color: white;
             border-radius: var(--radius-sm);
             font-weight: 700;
             padding: 14px 28px;
-            box-shadow: 0 4px 20px var(--glow-orange);
+            box-shadow: 0 4px 15px var(--glow-teal);
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px var(--glow-orange), 0 0 40px var(--glow-blue);
-            color: var(--bg);
+            box-shadow: 0 8px 25px var(--glow-teal);
+            color: white;
+            background: var(--accent-hover);
         }
         .btn-outline-secondary {
             color: var(--text-2);
@@ -586,7 +587,7 @@
                 background: var(--surface-2);
                 border-color: transparent;
                 transform: translateY(-4px);
-                box-shadow: 0 20px 40px rgba(0,0,0,.4), 0 0 30px rgba(47,164,255,.1);
+                box-shadow: var(--shadow-lg), 0 0 20px var(--glow-teal);
             }
             .approach-card:hover::before {
                 opacity: 0.15;
@@ -595,7 +596,7 @@
                 width: 44px;
                 height: 44px;
                 border-radius: 12px;
-                background: linear-gradient(135deg, rgba(255,122,26,.15), rgba(47,164,255,.1));
+                background: linear-gradient(135deg, rgba(47,164,169,.12), rgba(11,31,58,.08));
                 display: flex;
                 align-items: center;
                 justify-content: center;
