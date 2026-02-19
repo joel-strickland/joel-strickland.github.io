@@ -8,24 +8,30 @@
    ============================================ */
 :root {
     /* Core */
-    --bg: #0B0B0B;
-    --surface: #111214;
-    --surface-2: #17181B;
-    --border: rgba(255,255,255,.10);
+    --bg: #F7F9FB;
+    --surface: #FFFFFF;
+    --surface-2: #EEF1F5;
+    --border: rgba(11,31,58,.12);
     
     /* Text */
-    --text: rgba(255,255,255,.95);
-    --text-2: rgba(255,255,255,.72);
-    --text-3: rgba(255,255,255,.50);
+    --text: #111827;
+    --text-2: #4B5563;
+    --text-3: #6B7280;
     
-    /* Brand accents */
-    --accent: #FF7A1A;
-    --accent-2: #2FA4FF;
-    --glow-orange: rgba(255,122,26,.4);
-    --glow-blue: rgba(47,164,255,.4);
+    /* Brand colors */
+    --primary: #0B1F3A;
+    --secondary: #3A506B;
+    --accent: #2FA4A9;
+    --accent-hover: #268A8E;
+    
+    /* Legacy accent names (for gradients) */
+    --accent-2: #2FA4A9;
+    --glow-teal: rgba(47,164,169,.25);
+    --glow-navy: rgba(11,31,58,.15);
     
     /* Effects */
-    --shadow: 0 10px 30px rgba(0,0,0,.45);
+    --shadow: 0 4px 20px rgba(11,31,58,.08);
+    --shadow-lg: 0 10px 40px rgba(11,31,58,.12);
     --radius: 16px;
     --radius-sm: 10px;
     
@@ -60,8 +66,8 @@ body {
     color: var(--text);
     background-color: var(--bg);
     background-image: 
-        radial-gradient(ellipse at 20% 0%, rgba(255,122,26,.03) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 100%, rgba(47,164,255,.03) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 0%, rgba(47,164,169,.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(11,31,58,.03) 0%, transparent 50%);
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
@@ -74,8 +80,8 @@ body::before {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background-image: 
-        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+        linear-gradient(rgba(11,31,58,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11,31,58,.03) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
     z-index: 0;
@@ -104,12 +110,12 @@ a {
 }
 
 a:hover { 
-    color: var(--accent); 
+    color: var(--accent-hover); 
 }
 
 /* Focus states */
 :focus-visible {
-    outline: 2px solid var(--accent-2);
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
     border-radius: 8px;
 }
@@ -134,7 +140,7 @@ a:hover {
    NAVIGATION BAR
    ============================================ */
 .main-nav {
-    background: rgba(11, 11, 11, 0.85);
+    background: rgba(247, 249, 251, 0.92);
     padding: 14px 0;
     position: fixed;
     top: 0;
@@ -145,6 +151,7 @@ a:hover {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(11,31,58,.05);
 }
 
 .main-nav .container {
@@ -184,28 +191,28 @@ a:hover {
 }
 
 .main-nav .nav-links a:hover {
-    background: rgba(255,255,255,.08);
-    color: var(--text);
+    background: rgba(11,31,58,.06);
+    color: var(--primary);
 }
 
 .main-nav .nav-links a.active {
-    color: var(--text);
-    background: rgba(255,255,255,.05);
+    color: var(--primary);
+    background: rgba(11,31,58,.08);
 }
 
 .main-nav .nav-links .btn-contact {
-    color: #0B0B0B;
+    color: white;
     padding: 10px 20px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    background: var(--accent);
     font-weight: 700;
-    box-shadow: 0 4px 15px var(--glow-orange);
+    box-shadow: 0 2px 8px var(--glow-teal);
 }
 
 .main-nav .nav-links .btn-contact:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--glow-orange), 0 0 30px var(--glow-blue);
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    color: #0B0B0B;
+    box-shadow: 0 4px 16px var(--glow-teal);
+    background: var(--accent-hover);
+    color: white;
 }
 
 /* Dropdown menu */
@@ -232,8 +239,8 @@ a:hover {
 }
 
 .nav-dropdown-toggle:hover {
-    background: rgba(255,255,255,.08);
-    color: var(--text);
+    background: rgba(11,31,58,.06);
+    color: var(--primary);
 }
 
 .nav-dropdown-toggle svg {
@@ -259,7 +266,7 @@ a:hover {
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease;
-    box-shadow: 0 10px 40px rgba(0,0,0,.4);
+    box-shadow: var(--shadow-lg);
     z-index: 1001;
 }
 
@@ -279,8 +286,8 @@ a:hover {
 }
 
 .nav-dropdown-menu a:hover {
-    background: rgba(255,255,255,.08);
-    color: var(--text);
+    background: rgba(11,31,58,.06);
+    color: var(--primary);
 }
 
 /* Tighter nav on medium screens */
@@ -312,8 +319,8 @@ a:hover {
 }
 
 @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px var(--glow-orange), 0 0 40px var(--glow-blue); }
-    50% { box-shadow: 0 0 30px var(--glow-blue), 0 0 60px var(--glow-orange); }
+    0%, 100% { box-shadow: 0 0 10px var(--glow-teal), 0 0 20px var(--glow-navy); }
+    50% { box-shadow: 0 0 15px var(--glow-navy), 0 0 30px var(--glow-teal); }
 }
 
 @keyframes shimmer {
@@ -332,10 +339,6 @@ a:hover {
     margin-bottom: 0.75rem;
     font-weight: 700;
     display: inline-block;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 /* Skip link for accessibility */
@@ -355,8 +358,8 @@ a:hover {
     width: auto;
     height: auto;
     padding: 12px 20px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    color: #0B0B0B;
+    background: var(--accent);
+    color: white;
     z-index: 9999;
     border-radius: 14px;
     text-decoration: none;
