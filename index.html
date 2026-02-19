@@ -62,8 +62,8 @@
     </script>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230B0B0B'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23FF7A1A'/%3E%3Cstop offset='100%25' stop-color='%232FA4FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='68' font-family='Inter,system-ui,sans-serif' font-size='50' font-weight='bold' fill='url(%23g)' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230B0B0B'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23FF7A1A'/%3E%3Cstop offset='100%25' stop-color='%232FA4FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='68' font-family='Inter,system-ui,sans-serif' font-size='50' font-weight='bold' fill='url(%23g)' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23F7F9FB'/%3E%3Ctext x='50' y='68' font-family='Inter,system-ui,sans-serif' font-size='50' font-weight='bold' fill='%230B1F3A' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23F7F9FB'/%3E%3Ctext x='50' y='68' font-family='Inter,system-ui,sans-serif' font-size='50' font-weight='bold' fill='%230B1F3A' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css?v=2">
@@ -708,17 +708,17 @@
                 color: var(--text);
                 transform: translateY(-2px);
                 border-color: transparent;
-                box-shadow: 0 8px 20px rgba(0,0,0,.3), 0 0 20px rgba(47,164,255,.08);
+                box-shadow: var(--shadow), 0 0 15px var(--glow-teal);
             }
             .filter-btn:hover::before {
                 opacity: 0.1;
             }
             .filter-btn.active {
-                background: linear-gradient(135deg, var(--accent), var(--accent-2));
-                color: #0B0B0B;
+                background: var(--accent);
+                color: white;
                 border-color: transparent;
                 transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(0,0,0,.3), 0 4px 15px var(--glow-orange);
+                box-shadow: var(--shadow), 0 4px 15px var(--glow-teal);
             }
             .portfolio-item { transition: opacity 0.3s ease, transform 0.3s ease; }
             .portfolio-item.hidden { display: none !important; }
@@ -760,7 +760,7 @@
                 border-color: transparent;
                 color: var(--text);
                 transform: translateY(-4px);
-                box-shadow: 0 20px 40px rgba(0,0,0,.4), 0 0 30px rgba(47,164,255,.1);
+                box-shadow: var(--shadow-lg), 0 0 20px var(--glow-teal);
             }
             .show-more-btn:hover::before {
                 opacity: 0.15;
@@ -1425,8 +1425,8 @@
             .tech-badge:hover { 
                 transform: translateY(-3px) scale(1.02);
                 border-color: transparent;
-                color: #0B0B0B;
-                box-shadow: 0 8px 20px rgba(0,0,0,.3), 0 0 20px var(--glow-orange);
+                color: white;
+                box-shadow: var(--shadow), 0 0 15px var(--glow-teal);
             }
             .tech-badge:hover::before {
                 opacity: 1;
