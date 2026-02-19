@@ -127,12 +127,26 @@ a:hover {
     max-width: 1100px; 
     margin: 0 auto;
     padding: 0 24px;
+    --bs-gutter-x: 24px;
     position: relative; 
     z-index: 1; 
 }
 
 @media (max-width: 768px) {
     .container {
+        --bs-gutter-x: 40px;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    
+    /* Also target Bootstrap's container padding directly */
+    .container,
+    .container-fluid,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
         padding-left: 40px !important;
         padding-right: 40px !important;
     }
@@ -140,6 +154,18 @@ a:hover {
 
 @media (max-width: 576px) {
     .container {
+        --bs-gutter-x: 32px;
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+    }
+    
+    .container,
+    .container-fluid,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
         padding-left: 32px !important;
         padding-right: 32px !important;
     }
