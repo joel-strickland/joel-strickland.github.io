@@ -51,9 +51,9 @@
     const footerHTML = isCV ? `
     <footer class="text-center" style="padding: 40px 0; border-top: 1px solid var(--border);">
         <div class="container">
-            <p style="margin-bottom: 8px;"><strong>Joel Strickland, PhD, CEng</strong></p>
-            <p>&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
-            <p>
+            <p style="margin-bottom: 8px; text-align: center;"><strong>Joel Strickland, PhD, CEng</strong></p>
+            <p style="text-align: center;">&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
+            <p style="text-align: center;">
                 <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
                 <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
                 <a href="index.html" style="margin: 0 10px;">Home</a>
@@ -63,9 +63,9 @@
     ` : `
     <footer class="text-center">
         <div class="container">
-            <p style="margin-bottom: 8px;"><strong>Joel Strickland, PhD, CEng</strong></p>
-            <p>&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
-            <p>
+            <p style="margin-bottom: 8px; text-align: center;"><strong>Joel Strickland, PhD, CEng</strong></p>
+            <p style="text-align: center;">&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
+            <p style="text-align: center;">
                 <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
                 <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
                 <a href="cv.html" style="margin: 0 10px;">CV</a>
