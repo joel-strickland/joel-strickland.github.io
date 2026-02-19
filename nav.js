@@ -48,17 +48,17 @@
     // ============================================
     // FOOTER
     // ============================================
-    // CV page: simpler footer without container (inherits .cv-content width)
-    // Homepage: footer with container for full-width layout
     const footerHTML = isCV ? `
     <footer class="text-center" style="padding: 40px 0; border-top: 1px solid var(--border);">
-        <p style="margin-bottom: 8px;"><strong>Joel Strickland, PhD, CEng</strong></p>
-        <p>&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
-        <p>
-            <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
-            <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
-            <a href="index.html" style="margin: 0 10px;">Home</a>
-        </p>
+        <div class="container">
+            <p style="margin-bottom: 8px;"><strong>Joel Strickland, PhD, CEng</strong></p>
+            <p>&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
+            <p>
+                <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
+                <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
+                <a href="index.html" style="margin: 0 10px;">Home</a>
+            </p>
+        </div>
     </footer>
     ` : `
     <footer class="text-center">
