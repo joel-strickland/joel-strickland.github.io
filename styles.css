@@ -847,6 +847,11 @@ a.card-link .card {
     position: relative;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (max-width: 768px) {
+    .highlight {
+        padding: 28px 24px;
+    }
+}
 .highlight::before {
     content: '';
     position: absolute;
