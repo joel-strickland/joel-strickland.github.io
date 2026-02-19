@@ -55,9 +55,9 @@
         <p style="margin-bottom: 8px;"><strong>Joel Strickland, PhD, CEng</strong></p>
         <p>&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
         <p>
-            <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="color: white; margin: 0 10px;">LinkedIn</a> |
-            <a href="mailto:joelstrickland.ai@gmail.com" style="color: white; margin: 0 10px;">Email</a> |
-            <a href="index.html" style="color: white; margin: 0 10px;">Home</a>
+            <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
+            <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
+            <a href="index.html" style="margin: 0 10px;">Home</a>
         </p>
     </footer>
     ` : `
@@ -66,9 +66,9 @@
             <p style="margin-bottom: 8px;"><strong>Joel Strickland, PhD, CEng</strong></p>
             <p>&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
             <p>
-                <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="color: white; margin: 0 10px;">LinkedIn</a> |
-                <a href="mailto:joelstrickland.ai@gmail.com" style="color: white; margin: 0 10px;">Email</a> |
-                <a href="cv.html" style="color: white; margin: 0 10px;">CV</a>
+                <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
+                <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
+                <a href="cv.html" style="margin: 0 10px;">CV</a>
             </p>
         </div>
     </footer>
