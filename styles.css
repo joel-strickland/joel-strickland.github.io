@@ -668,7 +668,8 @@ a:hover {
 #contact-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
+    row-gap: 24px;
     align-items: center;
     justify-content: center;
 }
