@@ -45,6 +45,13 @@ Professional website showcasing AI/ML work, case studies, publications, and tech
 - GitHub Pages
 - Custom domain ready
 
+## License
+
+- **Code:** MIT License (HTML, CSS, JavaScript) - see [LICENSE](LICENSE)
+- **Content:** All rights reserved (text, images, case studies, professional materials)
+
+Feel free to learn from and reuse the code. Content remains copyrighted.
+
 ## Site Structure
 
 - `index.html` - Homepage with portfolio, expertise, and track record

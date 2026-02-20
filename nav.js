@@ -53,7 +53,7 @@
     <footer class="text-center" style="padding: 40px 0; border-top: 1px solid var(--border);">
         <div class="container">
             <p style="margin-bottom: 8px; text-align: center;"><strong>${config.title}</strong></p>
-            <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. All rights reserved.</p>
+            <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. Site code MIT; content all rights reserved.</p>
             <p style="text-align: center;">
                 <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
                 <a href="mailto:${config.email}" style="margin: 0 10px;">Email</a> |
@@ -65,7 +65,7 @@
     <footer class="text-center">
         <div class="container">
             <p style="margin-bottom: 8px; text-align: center;"><strong>${config.title}</strong></p>
-            <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. All rights reserved.</p>
+            <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. Site code MIT; content all rights reserved.</p>
             <p style="text-align: center;">
                 <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
                 <a href="mailto:${config.email}" style="margin: 0 10px;">Email</a> |
