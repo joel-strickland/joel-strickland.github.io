@@ -1,8 +1,9 @@
 // Shared components for joel-strickland.github.io
 // Navigation, Working Together section, and Footer
-// Edit here to update all pages at once
+// Contact info is defined in config.js
 
 (function() {
+    const config = window.SITE_CONFIG;
     const isCV = window.location.pathname.includes('cv.html');
     const prefix = isCV ? 'index.html' : '';
     
@@ -35,7 +36,7 @@
                     </div>
                 </div>
                 <a href="cv.html"${isCV ? ' class="active"' : ''}>CV</a>
-                <a href="mailto:joelstrickland.ai@gmail.com" class="btn-contact">Contact</a>
+                <a href="mailto:${config.email}" class="btn-contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -51,11 +52,11 @@
     const footerHTML = isCV ? `
     <footer class="text-center" style="padding: 40px 0; border-top: 1px solid var(--border);">
         <div class="container">
-            <p style="margin-bottom: 8px; text-align: center;"><strong>Joel Strickland, PhD, CEng</strong></p>
-            <p style="text-align: center;">&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
+            <p style="margin-bottom: 8px; text-align: center;"><strong>${config.title}</strong></p>
+            <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. All rights reserved.</p>
             <p style="text-align: center;">
-                <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
-                <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
+                <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
+                <a href="mailto:${config.email}" style="margin: 0 10px;">Email</a> |
                 <a href="index.html" style="margin: 0 10px;">Home</a>
             </p>
         </div>
@@ -63,11 +64,11 @@
     ` : `
     <footer class="text-center">
         <div class="container">
-            <p style="margin-bottom: 8px; text-align: center;"><strong>Joel Strickland, PhD, CEng</strong></p>
-            <p style="text-align: center;">&copy; ${new Date().getFullYear()} Joel Strickland. All rights reserved.</p>
+            <p style="margin-bottom: 8px; text-align: center;"><strong>${config.title}</strong></p>
+            <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. All rights reserved.</p>
             <p style="text-align: center;">
-                <a href="https://www.linkedin.com/in/joel-strickland" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
-                <a href="mailto:joelstrickland.ai@gmail.com" style="margin: 0 10px;">Email</a> |
+                <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
+                <a href="mailto:${config.email}" style="margin: 0 10px;">Email</a> |
                 <a href="cv.html" style="margin: 0 10px;">CV</a>
             </p>
         </div>

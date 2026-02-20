@@ -83,7 +83,9 @@ The website follows a modern, premium aesthetic with:
 
 ## Contact
 
-- **Email:** joelstrickland.ai@gmail.com
+Contact information is centrally managed in [config.js](config.js).
+
+- **Email:** joel@joelstrickland.dev
 - **LinkedIn:** [linkedin.com/in/joel-strickland](https://linkedin.com/in/joel-strickland)
 - **Google Scholar:** [Profile](https://scholar.google.com/citations?user=G7DjT5kAAAAJ)
 - **ResearchGate:** [Joel-Strickland](https://www.researchgate.net/profile/Joel-Strickland)
