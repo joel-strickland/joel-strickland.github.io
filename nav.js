@@ -55,9 +55,9 @@
             <p style="margin-bottom: 8px; text-align: center;"><strong>${config.title}</strong></p>
             <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. Site code MIT; content all rights reserved.</p>
             <p style="text-align: center;">
-                <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
-                <a href="mailto:${config.email}" style="margin: 0 10px;">Email</a> |
-                <a href="index.html" style="margin: 0 10px;">Home</a>
+                <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="padding: 0 12px;">LinkedIn</a> |
+                <a href="mailto:${config.email}" style="padding: 0 12px;">Email</a> |
+                <a href="index.html" style="padding: 0 12px;">Home</a>
             </p>
         </div>
     </footer>
@@ -67,9 +67,9 @@
             <p style="margin-bottom: 8px; text-align: center;"><strong>${config.title}</strong></p>
             <p style="text-align: center;">&copy; ${new Date().getFullYear()} ${config.name}. Site code MIT; content all rights reserved.</p>
             <p style="text-align: center;">
-                <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">LinkedIn</a> |
-                <a href="mailto:${config.email}" style="margin: 0 10px;">Email</a> |
-                <a href="cv.html" style="margin: 0 10px;">CV</a>
+                <a href="${config.linkedIn}" target="_blank" rel="noopener noreferrer" style="padding: 0 12px;">LinkedIn</a> |
+                <a href="mailto:${config.email}" style="padding: 0 12px;">Email</a> |
+                <a href="cv.html" style="padding: 0 12px;">CV</a>
             </p>
         </div>
     </footer>
