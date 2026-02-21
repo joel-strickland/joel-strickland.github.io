@@ -32,6 +32,7 @@
                     <div class="nav-dropdown-menu">
                         <a href="${prefix}#tech-stack">Tech Stack</a>
                         <a href="${prefix}#faq">FAQ</a>
+                        <a href="${prefix}#beyond-work">Beyond Work</a>
                         <a href="${prefix}#contact">Contact</a>
                     </div>
                 </div>
