@@ -23,7 +23,7 @@ Professional website showcasing AI/ML work, case studies, publications, and tech
 - **Experience:** 9.4 years in ML/AI (research + industry)
 - **Clients:** Rolls-Royce, DOW, voestalpine, BAT, FUCHS, Yili, OCAS, AMRC, and more
 - **Publications:** 20+ peer-reviewed papers
-- **Citations:** 290+
+- **Citations:** 317+
 - **Expertise:** Agentic AI, LLM Systems, ML Engineering, Decision Intelligence, Enterprise Enablement
 
 ## Technical Stack
