@@ -31,3 +31,9 @@ Thumbs.db
 !README.md
 !LICENSE
 !headshot.jpeg
+!CNAME
+!scholar-data.json
+!scripts/
+!scripts/**
+!.github/
+!.github/**

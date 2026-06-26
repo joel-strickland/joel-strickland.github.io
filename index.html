@@ -170,14 +170,14 @@
             </div>
             <div class="col-md-3 text-center">
                 <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;" title="View on Google Scholar">
-                    <div class="stats-number" data-target="20" data-suffix="+" style="cursor: pointer;">20+</div>
+                    <div class="stats-number" id="publications-counter" data-target="30" data-suffix="+" style="cursor: pointer;">30+</div>
                     <p style="text-decoration: underline; text-decoration-style: dotted;">Publications</p>
-                    <p class="small text-muted" style="font-size: 0.75rem;">Peer-reviewed research</p>
+                    <p class="small text-muted" style="font-size: 0.75rem;">On Google Scholar</p>
                 </a>
             </div>
             <div class="col-md-3 text-center">
                 <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;" title="View on Google Scholar">
-                    <div class="stats-number" data-target="317" data-suffix="+" style="cursor: pointer;">317+</div>
+                    <div class="stats-number" id="citations-counter" data-target="339" data-suffix="+" style="cursor: pointer;">339+</div>
                     <p style="text-decoration: underline; text-decoration-style: dotted;">Citations</p>
                     <p class="small text-muted" style="font-size: 0.75rem;">Academic impact</p>
                 </a>
@@ -1247,7 +1247,7 @@
             <div class="faq-item">
                 <button class="faq-question">What's your technical background?</button>
                 <div class="faq-answer">
-                    <p>PhD in Materials Science with ML (Rolls-Royce sponsored), Chartered Engineer (CEng), 20+ peer-reviewed publications with 317+ citations. Strong in Python, ML/statistics, and backend development.</p>
+                    <p>PhD in Materials Science with ML (Rolls-Royce sponsored), Chartered Engineer (CEng), 30+ publications with 339+ citations. Strong in Python, ML/statistics, and backend development.</p>
                 </div>
             </div>
             
@@ -1391,6 +1391,23 @@
             if (aboutYears) {
                 aboutYears.textContent = calculateYears().toFixed(1);
             }
+
+            // Load scholar stats from JSON (updated weekly by GitHub Actions)
+            fetch('scholar-data.json')
+                .then(r => r.json())
+                .then(data => {
+                    const pubEl = document.getElementById('publications-counter');
+                    const citeEl = document.getElementById('citations-counter');
+                    if (pubEl && data.publications) {
+                        pubEl.dataset.target = data.publications;
+                        pubEl.textContent = data.publications + '+';
+                    }
+                    if (citeEl && data.citations) {
+                        citeEl.dataset.target = data.citations;
+                        citeEl.textContent = data.citations + '+';
+                    }
+                })
+                .catch(() => { /* Use hardcoded fallback values */ });
         });
         
         // Populate hero social links and buttons from config
