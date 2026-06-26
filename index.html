@@ -191,8 +191,11 @@
         <h2>About</h2>
         <div class="highlight">
             <p class="lead" style="margin-bottom: 20px;">I'm an Artificial Intelligence Engineer focused on practical problem-solving. I enjoy work where the goal is measurable impact: improved decisions, reduced risk, faster delivery, and systems that teams can actually run. <span id="about-years">9.4</span> years in ML/AI—from PhD research with Rolls-Royce through to industrial AI delivery across pharma, chemicals, materials, manufacturing, and consumer goods.</p>
-            <p style="color: var(--text-2);">My background spans modelling under uncertainty, end-to-end software delivery, and communicating complex ideas to stakeholders. I use whatever approach best fits the problem—from classical methods through to modern ML and LLMs.</p>
-            <p style="color: var(--text-2);">Over five years at a Cambridge University AI spin-out, I put that into practice—helping grow the business from ~£50k to ~£2M ARR, running demos, leading workshops, and working directly with customers on their biggest accounts. As the lead solutions engineer, I supported ~£3M of closed business alongside account managers and commercial leads—more than 2× the next-nearest technical contributor.</p>
+            <div id="about-more" style="display: none;">
+                <p style="color: var(--text-2);">My background spans modelling under uncertainty, end-to-end software delivery, and communicating complex ideas to stakeholders. I use whatever approach best fits the problem—from classical methods through to modern ML and LLMs.</p>
+                <p style="color: var(--text-2);">Over five years at a Cambridge University AI spin-out, I put that into practice—helping grow the business from ~£50k to ~£2M ARR, running demos, leading workshops, and working directly with customers on their biggest accounts. As the lead solutions engineer, I supported ~£3M of closed business alongside account managers and commercial leads—more than 2× the next-nearest technical contributor.</p>
+            </div>
+            <button id="about-toggle" onclick="toggleAbout()" style="background: none; border: none; color: var(--accent-2); cursor: pointer; font-size: 0.95rem; padding: 8px 0 0; font-weight: 500;">See more ↓</button>
         </div>
     </div>
 
@@ -1304,6 +1307,19 @@
             
             content.classList.toggle('expanded');
             toggle.classList.toggle('expanded');
+        }
+
+        // Toggle about section
+        function toggleAbout() {
+            const more = document.getElementById('about-more');
+            const btn = document.getElementById('about-toggle');
+            if (more.style.display === 'none') {
+                more.style.display = 'block';
+                btn.textContent = 'See less \u2191';
+            } else {
+                more.style.display = 'none';
+                btn.textContent = 'See more \u2193';
+            }
         }
 
         // Calculate years since PhD started (September 2016)
