@@ -22,9 +22,11 @@ Professional website showcasing AI/ML work, case studies, publications, and tech
 - **Position:** Head of Agentic AI at Intellegens | Visiting Expert at University of Leicester
 - **Experience:** 9.4 years in ML/AI (research + industry)
 - **Clients:** Rolls-Royce, DOW, voestalpine, BAT, FUCHS, Yili, OCAS, AMRC, and more
-- **Publications:** 20+ peer-reviewed papers
-- **Citations:** 317+
+- **Publications:** 30+ articles on Google Scholar
+- **Citations:** 339+
 - **Expertise:** Agentic AI, LLM Systems, ML Engineering, Decision Intelligence, Enterprise Enablement
+
+> Stats auto-update weekly via GitHub Actions (`scholar-data.json`).
 
 ## Technical Stack
 
@@ -58,6 +60,10 @@ Feel free to learn from and reuse the code. Content remains copyrighted.
 - `cv.html` - Detailed CV with career timeline and skills breakdown
 - `styles.css` - Shared styles and design tokens
 - `nav.js` - Shared navigation and footer components
+- `config.js` - Site-wide configuration (URLs, social links)
+- `scholar-data.json` - Auto-updated Google Scholar stats
+- `scripts/update_scholar.py` - Script to fetch Scholar data
+- `.github/workflows/update-scholar.yml` - Weekly auto-update workflow
 - `LICENSE` - MIT License
 
 ## Key Sections
