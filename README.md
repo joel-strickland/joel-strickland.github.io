@@ -1,6 +1,6 @@
 # joel-strickland.github.io
 
-Personal website and portfolio for Joel Strickland, PhD, CEng - Artificial Intelligence Engineer.
+Personal website and portfolio for Joel Strickland, PhD, CEng - Deployed Engineer @ LangChain.
 
 **Live site:** [joel-strickland.github.io](https://joel-strickland.github.io)
 
@@ -19,12 +19,12 @@ Professional website showcasing AI/ML work, case studies, publications, and tech
 
 ## Professional Profile
 
-- **Position:** Head of Agentic AI at Intellegens | Visiting Expert at University of Leicester
+- **Position:** Deployed Engineer at LangChain (founding EMEA team)
 - **Experience:** 9.8 years in ML/AI (research + industry)
 - **Clients:** Rolls-Royce, DOW, voestalpine, BAT, FUCHS, Yili, OCAS, AMRC, and more
 - **Publications:** 30+ articles on Google Scholar
 - **Citations:** 341+
-- **Expertise:** Agentic AI, LLM Systems, ML Engineering, Decision Intelligence, Enterprise Enablement
+- **Expertise:** Agentic AI, LangChain/LangGraph/LangSmith, Production LLM Systems, Customer Engineering, Enterprise Adoption
 
 > Stats auto-update weekly via GitHub Actions (`scholar-data.json`).
 
