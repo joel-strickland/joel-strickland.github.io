@@ -4,9 +4,10 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 
-from scholarly import scholarly
+from scholarly import ProxyGenerator, scholarly
 
 SCHOLAR_ID = "G7DjT5kAAAAJ"
 ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -41,10 +42,35 @@ def update_file(filepath, replacements):
         f.write(content)
 
 
+def fetch_with_retry(max_retries=3):
+    """Fetch scholar data with proxy fallback and retries."""
+    for attempt in range(max_retries):
+        try:
+            if attempt > 0:
+                # Use free proxy on retry to avoid IP blocks
+                pg = ProxyGenerator()
+                pg.FreeProxies()
+                scholarly.use_proxy(pg)
+                time.sleep(attempt * 5)
+
+            author = scholarly.search_author_id(SCHOLAR_ID)
+            author = scholarly.fill(
+                author, sections=["basics", "indices", "publications"]
+            )
+            return author
+        except Exception as e:
+            print(f"  Attempt {attempt + 1}/{max_retries} failed: {e}", file=sys.stderr)
+            if attempt == max_retries - 1:
+                raise
+    return None
+
+
 def main():
     try:
-        author = scholarly.search_author_id(SCHOLAR_ID)
-        author = scholarly.fill(author, sections=["basics", "indices", "publications"])
+        author = fetch_with_retry()
+        if author is None:
+            print("Failed to fetch scholar data after retries", file=sys.stderr)
+            sys.exit(1)
 
         citations = author.get("citedby", 0)
         publications = len(author.get("publications", []))
@@ -137,7 +163,5 @@ def main():
         sys.exit(1)
 
 
-if __name__ == "__main__":
-    main()
 if __name__ == "__main__":
     main()

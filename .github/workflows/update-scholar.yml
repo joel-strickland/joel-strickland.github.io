@@ -21,10 +21,11 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install scholarly
+        run: pip install scholarly free-proxy
 
       - name: Fetch scholar data
         run: python scripts/update_scholar.py
+        timeout-minutes: 5
 
       - name: Commit and push if changed
         run: |

@@ -20,10 +20,10 @@ Professional website showcasing AI/ML work, case studies, publications, and tech
 ## Professional Profile
 
 - **Position:** Head of Agentic AI at Intellegens | Visiting Expert at University of Leicester
-- **Experience:** 9.4 years in ML/AI (research + industry)
+- **Experience:** 9.8 years in ML/AI (research + industry)
 - **Clients:** Rolls-Royce, DOW, voestalpine, BAT, FUCHS, Yili, OCAS, AMRC, and more
 - **Publications:** 30+ articles on Google Scholar
-- **Citations:** 339+
+- **Citations:** 341+
 - **Expertise:** Agentic AI, LLM Systems, ML Engineering, Decision Intelligence, Enterprise Enablement
 
 > Stats auto-update weekly via GitHub Actions (`scholar-data.json`).
