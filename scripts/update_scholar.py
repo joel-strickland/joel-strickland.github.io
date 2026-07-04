@@ -43,16 +43,18 @@ def update_file(filepath, replacements):
 
 
 def fetch_with_retry(max_retries=3):
-    """Fetch scholar data with proxy fallback and retries."""
+    """Fetch scholar data with retries and timeouts."""
     for attempt in range(max_retries):
         try:
             if attempt > 0:
-                # Use free proxy on retry to avoid IP blocks
+                time.sleep(10)
+                # Set up proxy on retry
                 pg = ProxyGenerator()
-                pg.FreeProxies()
-                scholarly.use_proxy(pg)
-                time.sleep(attempt * 5)
+                success = pg.FreeProxies(timeout=15)
+                if success:
+                    scholarly.use_proxy(pg)
 
+            scholarly.set_timeout(30)
             author = scholarly.search_author_id(SCHOLAR_ID)
             author = scholarly.fill(
                 author, sections=["basics", "indices", "publications"]

@@ -25,7 +25,8 @@ jobs:
 
       - name: Fetch scholar data
         run: python scripts/update_scholar.py
-        timeout-minutes: 5
+        timeout-minutes: 3
+        continue-on-error: true
 
       - name: Commit and push if changed
         run: |
