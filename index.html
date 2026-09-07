@@ -265,7 +265,7 @@
         <!-- Filter buttons -->
         <div class="portfolio-filters mb-4">
             <button class="filter-btn" data-filter="all">All</button>
-            <button class="filter-btn active" data-filter="casestudy">Case Studies</button>
+            <button class="filter-btn active" data-filter="casestudy">Highlights</button>
             <button class="filter-btn" data-filter="publication">Publications</button>
             <button class="filter-btn" data-filter="writing">Technical Writing</button>
             <button class="filter-btn" data-filter="webinar">Webinars</button>
@@ -375,41 +375,43 @@
         
         <div class="row g-4" id="portfolio-grid">
             <!-- CASE STUDIES -->
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="0">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="1">
                 <a href="https://github.com/joel-langchain/throughline" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Open-Source Project &mdash; LangGraph / LangSmith, 2026</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Open-Source Project &mdash; LangGraph, 2026</h6>
                             <h5 class="card-title">Throughline &mdash; Weekly AI-News Agent</h5>
                             <div class="case-study-text">
                                 <div class="case-study-section">
-                                    <strong>Role:</strong> Designed and built end to end. A deployed agent that reads across the week's writing and returns one cited report, architected as four nested loops&mdash;agent, verification, event, and improvement.
+                                    <strong>Role:</strong> Designed and built end to end&mdash;an agent that reads the week's writing and returns one cited report, structured as four loops: agent, verification, event, and improvement.
                                 </div>
                                 <div class="case-study-section">
-                                    <strong>Stack:</strong> Runs unattended on LangGraph Platform (weekly cron, Slack delivery) with citation verification and bounded re-research, golden-set evals + reference-free evaluators gating every PR in CI, human-in-the-loop on risk, and end-to-end LangSmith tracing. MIT-licensed.
+                                    <strong>Impact:</strong> Runs unattended on LangGraph Platform with citation verification, eval-gated CI, and end-to-end LangSmith tracing. MIT-licensed.
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="1">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Grant &mdash; Innovate UK Frontier AI, 2026</h6>
-                        <h5 class="card-title">Adaptive World Models for Experimental Design</h5>
-                        <div class="case-study-text">
-                            <div class="case-study-section">
-                                <strong>Role:</strong> Sole author of the winning bid to the UK government's Innovate UK &ldquo;AI Champions: Frontier AI&rdquo; programme (Theme 2: Advanced Materials with AI). Conceived the concept, wrote the full application, and built the project plan and Gantt for this Intellegens-led feasibility study.
-                            </div>
-                            <div class="case-study-section">
-                                <strong>Impact:</strong> Scored ~86% (competition range 72&ndash;89%), among ~24 of ~620 applications funded (~top 4%); secured a £151K grant. Develops a novel training methodology for world models&mdash;training on physics-simulator trajectories, then &ldquo;dreaming&rdquo; forward to recommend the next experiment&mdash;for sparse-data, path-dependent manufacturing.
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="2">
+                <a href="https://intellegens.com/intellegens-wins-frontier-ai-grant-to-drive-next-gen-materials-innovation/" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Grant &mdash; Innovate UK Frontier AI, 2026</h6>
+                            <h5 class="card-title">Adaptive World Models for Experimental Design</h5>
+                            <div class="case-study-text">
+                                <div class="case-study-section">
+                                    <strong>Role:</strong> Co-developed the core concept, then sole author of the winning application. The idea: training world models (the planning AI behind systems like MuZero) on synthetic trajectories from physics simulators, so they work in manufacturing's sparse-data regime where standard methods need millions of examples.
+                                </div>
+                                <div class="case-study-section">
+                                    <strong>Impact:</strong> A top ~4% result&mdash;~86% score (range 72&ndash;89%), among ~24 of ~620 applications funded&mdash;winning a £151K Innovate UK grant. Extends Intellegens' Alchemite platform into sequential, path-dependent manufacturing, validated on cemented-carbide tooling with Milwaukee Tool.
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="2">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="3">
                 <a href="https://www.nature.com/articles/s44172-025-00548-6" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -427,7 +429,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="3">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="4">
                 <a href="https://intellegens.com/advanced-materials-and-processes-at-voestalpine/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -445,7 +447,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="4">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="5">
                 <a href="https://intellegens.com/developing-food-formulations-at-yili/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -463,7 +465,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="5">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="6">
                 <a href="https://intellegens.com/understanding-and-improving-steel-performance-with-ocas/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -481,7 +483,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="6">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="7">
                 <a href="https://intellegens.com/composite-manufacturing-with-the-amrc/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -499,7 +501,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="7">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="8">
                 <a href="https://intellegens.com/fuchs-speeds-lubricant-formulation-development/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -517,7 +519,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="8">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="9">
                 <a href="https://link.springer.com/article/10.1186/s13040-024-00375-z" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
