@@ -1430,7 +1430,7 @@
             }
 
             // Load scholar stats from JSON (updated weekly by GitHub Actions)
-            fetch('scholar-data.json')
+            fetch('scholar-data.json?v=' + Date.now())
                 .then(r => r.json())
                 .then(data => {
                     const pubEl = document.getElementById('publications-counter');
