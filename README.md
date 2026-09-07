@@ -23,7 +23,7 @@ Professional website showcasing AI/ML work, case studies, publications, and tech
 - **Experience:** 9.8 years in ML/AI (research + industry)
 - **Clients:** Rolls-Royce, DOW, voestalpine, BAT, FUCHS, Yili, OCAS, AMRC, and more
 - **Publications:** 30+ articles on Google Scholar
-- **Citations:** 341+
+- **Citations:** 361+
 - **Expertise:** Agentic AI, LangChain/LangGraph/LangSmith, Production LLM Systems, Customer Engineering, Enterprise Adoption
 
 > Stats auto-update weekly via GitHub Actions (`scholar-data.json`).
