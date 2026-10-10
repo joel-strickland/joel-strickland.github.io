@@ -165,7 +165,7 @@
                 </a>
             </div>
             <div class="col-md-3 text-center">
-                <div class="stats-number" id="years-counter" data-target="9.8">9.8</div>
+                <div class="stats-number" id="years-counter" data-target="10.1">10.1</div>
                 <p>Years in ML/AI</p>
                 <p class="small text-muted" style="font-size: 0.75rem;">Research + industry</p>
             </div>
@@ -178,7 +178,7 @@
             </div>
             <div class="col-md-3 text-center">
                 <a href="https://scholar.google.com/citations?user=G7DjT5kAAAAJ" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;" title="View on Google Scholar">
-                    <div class="stats-number" id="citations-counter" data-target="361" data-suffix="+" style="cursor: pointer;">361+</div>
+                    <div class="stats-number" id="citations-counter" data-target="380" data-suffix="+" style="cursor: pointer;">380+</div>
                     <p style="text-decoration: underline; text-decoration-style: dotted;">Citations</p>
                     <p class="small text-muted" style="font-size: 0.75rem;">Academic impact</p>
                 </a>
@@ -191,7 +191,7 @@
         <div class="section-label">Background</div>
         <h2>About</h2>
         <div class="highlight">
-            <p class="lead" style="margin-bottom: 20px;">I'm a Deployed Engineer at LangChain, working with customers to design, build, and adopt practical AI systems. <span id="about-years">9.8</span> years in ML/AI—from PhD research with Rolls-Royce through to industrial AI delivery across pharma, chemicals, materials, manufacturing, and consumer goods.</p>
+            <p class="lead" style="margin-bottom: 20px;">I'm a Deployed Engineer at LangChain, working with customers to design, build, and adopt practical AI systems. <span id="about-years">10.1</span> years in ML/AI—from PhD research with Rolls-Royce through to industrial AI delivery across pharma, chemicals, materials, manufacturing, and consumer goods.</p>
             <div id="about-more" style="display: none;">
                 <p style="color: var(--text-2);">My background combines AI/ML, software engineering, decision intelligence, and customer-facing delivery. I've worked across the full path from ambiguous real-world problems to measurable, working solutions—including problem framing, modelling, software implementation, technical demos, workshops, and enterprise adoption.</p>
                 <p style="color: var(--text-2);">Before LangChain, I held technical leadership roles at Intellegens, a Cambridge University AI spin-out, where I led agentic AI and technical pre-sales work—helping grow the business from ~£50k to ~£2M ARR and supporting ~£3M of closed business as lead solutions engineer.</p>
@@ -375,7 +375,7 @@
         
         <div class="row g-4" id="portfolio-grid">
             <!-- CASE STUDIES -->
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="1">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="3">
                 <a href="https://github.com/joel-langchain/throughline" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -393,7 +393,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="2">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="1">
                 <a href="https://intellegens.com/intellegens-wins-frontier-ai-grant-to-drive-next-gen-materials-innovation/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -411,7 +411,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="3">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="4">
                 <a href="https://www.nature.com/articles/s44172-025-00548-6" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -429,7 +429,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="4">
+            <div class="col-md-6 portfolio-item" data-type="casestudy" data-index="2">
                 <a href="https://intellegens.com/advanced-materials-and-processes-at-voestalpine/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <div class="card h-100">
                         <div class="card-body">
@@ -899,6 +899,13 @@
     let currentTypeFilter = 'casestudy';
     
     function applyFilters() {
+        const portfolioGrid = document.getElementById('portfolio-grid');
+        const caseStudies = Array.from(portfolioGrid.querySelectorAll('.portfolio-item[data-type~="casestudy"]'));
+        const firstOtherItem = portfolioGrid.querySelector('.portfolio-item:not([data-type~="casestudy"])');
+        caseStudies
+            .sort((first, second) => Number(first.dataset.index) - Number(second.dataset.index))
+            .forEach(item => portfolioGrid.insertBefore(item, firstOtherItem));
+
         const items = document.querySelectorAll('.portfolio-item');
         items.forEach(item => {
             const itemTypes = (item.dataset.type || '').split(' ');
@@ -1284,7 +1291,7 @@
             <div class="faq-item">
                 <button class="faq-question">What's your technical background?</button>
                 <div class="faq-answer">
-                    <p>PhD in Materials Science with ML (Rolls-Royce sponsored), Chartered Engineer (CEng), 30+ publications with 361+ citations. Strong in Python, ML/statistics, and backend development.</p>
+                    <p>PhD in Materials Science with ML (Rolls-Royce sponsored), Chartered Engineer (CEng), 30+ publications with 380+ citations. Strong in Python, ML/statistics, and backend development.</p>
                 </div>
             </div>
             
